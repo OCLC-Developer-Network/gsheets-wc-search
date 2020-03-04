@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
 	    new CopyPlugin([
 	        'Code.js',
-	        'sidebar.html',
+	        'Page.html',
 	        'appsscript.json',
 	        '.clasp.json'
 	      ])
