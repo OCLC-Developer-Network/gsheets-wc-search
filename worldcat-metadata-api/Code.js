@@ -1,9 +1,9 @@
-let baseURL = 'https://worldcat.org'
+const baseURL = 'https://worldcat.org'
 
 function onOpen() {
   SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
       .createMenu('Custom Menu')
-      .addItem('Add API Credentials', 'showSidebar')
+      .addItem('Add API Credentials', 'showDialog')
       .addSeparator()
       .addItem('Get Current OCLC Number', 'fillCurrentOCLCNumber')
       .addSeparator()
@@ -26,6 +26,14 @@ function showSidebar() {
       .showSidebar(html);    
 }
 
+function showDialog() {
+	  var html = HtmlService.createHtmlOutputFromFile('Page')
+	      .setWidth(400)
+	      .setHeight(300);
+	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
+	      .showModalDialog(html, 'Enter API Credentials');
+	}
+
 function saveCredentials(form) {
    
    var ui = SpreadsheetApp.getUi();
@@ -39,7 +47,14 @@ function saveCredentials(form) {
    }
    PropertiesService.getUserProperties().setProperty('apiKey', apiKey);
    PropertiesService.getUserProperties().setProperty('secret', secret);
-   
+ }
+
+function getStoredAPIKey() {
+    return PropertiesService.getUserProperties().getProperty('apiKey')
+ }
+
+function getStoredAPISecret() {
+    return PropertiesService.getUserProperties().getProperty('secret')
  }
 
 /**
@@ -58,8 +73,8 @@ function getService() {
       .setTokenUrl('https://oauth.oclc.org/token')
 
       // Set the client ID and secret.
-      .setClientId(PropertiesService.getUserProperties().getKey('apiKey'))
-      .setClientSecret(PropertiesService.getUserProperties().getKey('secret'))
+      .setClientId(PropertiesService.getUserProperties().getProperty('apiKey'))
+      .setClientSecret(PropertiesService.getUserProperties().getProperty('secret'))
 
       // Sets the custom grant type to use.
       .setGrantType('client_credentials')
@@ -74,9 +89,9 @@ function fillCurrentOCLCNumber(){
 	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
 	    .getDataRange();
 	  var bookValues = dataRange.getValues();
-	  for(var row = 1; row < bookValues.length; row++){  
-		  var currentOCLCNumber = getCurrentOCLCNumber(oclcNumber);
-		  bookValues[row][OCLC_NUM_NEW_COLUMN] = currentOCLCNumber;
+	  for(var row = 1; row < bookValues.length; row++){
+		  var currentOCLCNumber = getCurrentOCLCNumber(bookValues[row][0]);
+		  bookValues[row][1] = currentOCLCNumber;
 	  }
 	  
 	  dataRange.setValues(bookValues); 
@@ -87,8 +102,8 @@ function fillHoldings(){
 	    .getDataRange();
 	  var bookValues = dataRange.getValues();
 	  for(var row = 1; row < bookValues.length; row++){  
-		  var holdingsFlag = checkHoldings(oclcNumber);
-		  bookValues[row][OCLC_NUM_NEW_COLUMN] = holdingsFlag;
+		  var holdingsFlag = checkHoldings(bookValues[row][0]);
+		  bookValues[row][2] = holdingsFlag;
 	  }
 	  
 	  dataRange.setValues(bookValues);	
@@ -97,9 +112,12 @@ function fillHoldings(){
 function fillMetadata(){
 	  // Constants that identify the index of the title, author,
 	  // and ISBN columns (in the 2D bookValues array below). 
-	  var TITLE_COLUMN = 0;
-	  var AUTHOR_COLUMN = 1;
-	  var ISBN_COLUMN = 2;
+	  var OCLCNUM_COLUMN = 0;
+	  var CURRENT_OCLCNUM_COLUMN = 1;
+	  var HOLDINGS_COLUMN = 2;	  
+	  var TITLE_COLUMN = 3;
+	  var AUTHOR_COLUMN = 4;
+	  var ISBN_COLUMN = 5;
 
 	  // Get the current book information in the active sheet. The data
 	  // is placed into a 2D array.
@@ -114,7 +132,7 @@ function fillMetadata(){
 	  // missing titles or authors when they are found.
 	  for(var row = 1; row < bookValues.length; row++){   	   
 
-	      var bookData = getMetadata(oclcNumber);
+	      var bookData = getMetadata(bookValues[row][0]);
 
 	      // Sometimes the API doesn't return the information needed.
 	      // In those cases, don't attempt to update the row further.
@@ -150,7 +168,7 @@ function fillMetadata(){
 function getCurrentOCLCNumber(oclcNumber) {
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = + baseURL + '/bib/checkcontrolnumbers?oclcNumbers=' + oclcNumber;
+	    var url = baseURL + '/bib/checkcontrolnumbers?oclcNumbers=' + oclcNumber;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken(),
