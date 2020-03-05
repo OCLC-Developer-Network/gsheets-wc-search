@@ -1,5 +1,4 @@
-const marpc4js = require('marc4js');
-
+const marc4js = require('marc4js');
 
 function parseMarc(marcString) {
 	return new Promise(function (resolve, reject) {

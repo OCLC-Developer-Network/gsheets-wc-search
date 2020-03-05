@@ -173,8 +173,7 @@ function getCurrentOCLCNumber(oclcNumber) {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken(),
 	        Accept: 'application/json'
-	      },
-	      validateHttpsCertificates: false
+	      }
 	    });
 	    var result = JSON.parse(response.getContentText());
 	    return result.entry[0].currentOclcNumber
@@ -191,8 +190,7 @@ function checkHoldings(oclcNumber) {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken(),
 	        Accept: 'application/json'	        
-	      },
-	      validateHttpsCertificates: false
+	      }
 	    });
 	    var result = JSON.parse(response.getContentText());
 	    return result.isHoldingSet
@@ -204,20 +202,15 @@ function checkHoldings(oclcNumber) {
 function getMetadata(oclcNumber){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = baseURL + '/bib/' + oclcNumber;
+	    var url = baseURL + '/bib/data/' + oclcNumber;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
-	        Authorization: 'Bearer ' + service.getAccessToken(),
-	        Accept: 'application/json'	        
-	      },
-	      validateHttpsCertificates: false
+	        Authorization: 'Bearer ' + service.getAccessToken()        
+	      }
 	    });
-	    var result = XmlService.parse(response.getContentText());
-	    var root = document.getRootElement();
-	    var atom = XmlService.getNamespace('http://www.w3.org/2005/Atom');
-	    var entries = root.getChildren('entry', atom);
-	    var content = entries[0].getChild('content', atom).getText();
-	    parseMarc(content)
+	    var content = parseMARCFromXML(response.getContentText());
+	    Logger.log(content)
+	    appLibrary.parseMarc(content)
 	    .then(record => {	    
 		    let metadata = {
 		    		title: appLibrary.getTitle(record),
@@ -234,4 +227,14 @@ function getMetadata(oclcNumber){
 	  } else {
 	    Logger.log(service.getLastError());
 	  }
+}
+
+function parseMARCFromXML(responseXML){
+	var result = XmlService.parse(responseXML);
+    var root = result.getRootElement();
+    var atom = XmlService.getNamespace('http://www.w3.org/2005/Atom');
+    var rb = XmlService.getNamespace('http://worldcat.org/rb');
+    var entries = root.getChildren('content', atom);
+    var content = entries[0].getChild('response', rb).getText();
+    return content
 }
