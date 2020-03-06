@@ -227,7 +227,8 @@ function getMetadata(oclcNumber){
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
-	      }
+	      },
+	      validateHttpsCertificates: false
 	    });
 	    let bib = new Metadata.Bib(response.getContentText());	    
 		    let metadata = {
@@ -248,7 +249,8 @@ function getHoldingsCount(oclcNumber, country){
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
-	      }
+	      },
+	      validateHttpsCertificates: false
 	    });
 	    let bib = new Bib(response.getContentText());	    
 		let holdingsCount = bibHoldings.briefRecords.institutionHolding.totalHoldingCount
@@ -265,7 +267,8 @@ function checkRetentions(oclcNumber, filterType, filterValue){
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
-	      }
+	      },
+	      validateHttpsCertificates: false
 	    });
 	    let bibRetainedHoldings = JSON.parse(response.getContentText());	    
 		let numberOfRecords = bibRetainedHoldings.numberOfRecords
@@ -286,7 +289,8 @@ function getRetentions(oclcNumber, filterType, filterValue){
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
-	      }
+	      },
+	      validateHttpsCertificates: false
 	    });
 	    let bibRetainedHoldings = JSON.parse(response.getContentText());	    
 		let retentionSet = bibRetainedHoldings.briefRecords.institutionHolding.briefHoldings
