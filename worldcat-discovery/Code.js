@@ -246,7 +246,7 @@ function getMetadata(oclcNumber){
 function getHoldingsCount(oclcNumber, country){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = baseURL + '/bib-holdings?oclcNumber=' + oclcNumber + '&heldInCountry=' + country;
+	    var url = baseURL + '/bibs-holdings?oclcNumber=' + oclcNumber + '&heldInCountry=' + country;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -264,7 +264,7 @@ function getHoldingsCount(oclcNumber, country){
 function checkRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = baseURL + '/bib-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+	    var url = baseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -286,7 +286,7 @@ function checkRetentions(oclcNumber, filterType, filterValue){
 function getRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = baseURL + '/bib-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+		var url = baseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
