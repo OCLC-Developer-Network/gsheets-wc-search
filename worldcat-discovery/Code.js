@@ -294,9 +294,13 @@ function getRetentions(oclcNumber, filterType, filterValue){
 	      validateHttpsCertificates: false
 	    });
 	    let bibRetainedHoldings = JSON.parse(response.getContentText());	    
-		let retentionSet = bibRetainedHoldings.briefRecords.institutionHolding.briefHoldings
-		let oclcSymbolsRetentions = retentionSet.map(retention => retention.oclcSymbol)
-		return oclcSymbolsRetentions.join();
+        if (bibRetainedHoldings.numberOfRecords == 0){
+            return "None"
+        } else {  
+			let retentionSet = bibRetainedHoldings.briefRecords[0].institutionHolding.briefHoldings
+			let oclcSymbolsRetentions = retentionSet.map(retention => retention.oclcSymbol)
+			return oclcSymbolsRetentions.join();
+        }
 	  } else {
 	    Logger.log(service.getLastError());
 	  }
