@@ -229,7 +229,7 @@ function getMetadata(oclcNumber){
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      }
 	    });
-	    let bib = new Bib(response.getContentText());	    
+	    let bib = new Metadata.Bib(response.getContentText());	    
 		    let metadata = {
 		    		title: bib.getTitle(),
 		    		author: bib.getAuthor(),
@@ -261,7 +261,7 @@ function getHoldingsCount(oclcNumber, country){
 function checkRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = baseURL + '/bib-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '+'=' + filterValue;
+	    var url = baseURL + '/bib-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -282,7 +282,7 @@ function checkRetentions(oclcNumber, filterType, filterValue){
 function getRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = baseURL + '/bib-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '+'=' + filterValue;
+		var url = baseURL + '/bib-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
