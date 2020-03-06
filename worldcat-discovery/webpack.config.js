@@ -10,12 +10,14 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'var',
-    library: 'appLibrary'
+    library: 'Metadata'
   },  
   plugins: [
 	    new CopyPlugin([
 	        'Code.js',
 	        'Page.html',
+	        'GetRetentions.html',
+	        'CheckRetentions.html',	        
 	        'appsscript.json',
 	        '.clasp.json'
 	      ])
