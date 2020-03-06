@@ -2,7 +2,7 @@ const marc4js = require('marc4js');
 
 function parseMarc(marcString) {
 	return new Promise(function (resolve, reject) {
-		marc4js.parse(record, {fromFormat: 'marcxml'}, function(err, records) {
+		marc4js.parse(marcString, {fromFormat: 'marcxml'}, function(err, records) {
 				resolve(records[0]);
 			})
 			.catch (err => {

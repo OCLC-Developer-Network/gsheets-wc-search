@@ -142,22 +142,21 @@ function fillMetadata(){
 
 	      // The API might not have a title, so only fill it in
 	      // if the API returns one
-	      if(bookData.details.isbns){
-	        bookValues[row][ISBN_COLUMN] = bookData.details.isbns; 
+	      if(bookData.isbns){
+	        bookValues[row][ISBN_COLUMN] = bookData.isbns; 
 	      }
 	      
 	      // The API might not have a title, so only fill it in
 	      // if the API returns one
-	      if(bookData.details.title){
-	        bookValues[row][TITLE_COLUMN] = bookData.details.title; 
+	      if(bookData.title){
+	        bookValues[row][TITLE_COLUMN] = bookData.title; 
 	      }
 
 	      // The API might not have an author name, so only fill it in
 	      // if the API returns one
-	      if(bookData.details.authors
-	          && bookData.details.authors[0].name){
+	      if(bookData.author){
 	        bookValues[row][AUTHOR_COLUMN] =
-	          bookData.details.authors[0].name; 
+	          bookData.author; 
 	      }
 	  }
 	  
@@ -209,7 +208,6 @@ function getMetadata(oclcNumber){
 	      }
 	    });
 	    var content = parseMARCFromXML(response.getContentText());
-	    Logger.log(content)
 	    appLibrary.parseMarc(content)
 	    .then(record => {	    
 		    let metadata = {
@@ -220,6 +218,7 @@ function getMetadata(oclcNumber){
 		    return metadata
 	    })
 	    .catch(error => {
+	    	Logger.log(error)
 	    	let metadata = {}
 	    	return metadata
 	    })
@@ -234,7 +233,9 @@ function parseMARCFromXML(responseXML){
     var root = result.getRootElement();
     var atom = XmlService.getNamespace('http://www.w3.org/2005/Atom');
     var rb = XmlService.getNamespace('http://worldcat.org/rb');
+    var marc = XmlService.getNamespace('http://www.loc.gov/MARC21/slim');
     var entries = root.getChildren('content', atom);
-    var content = entries[0].getChild('response', rb).getText();
-    return content
+    var content = entries[0].getChild('response', rb).getChild('record', marc);
+    var xml = XmlService.getCompactFormat().format(content);
+    return xml
 }
