@@ -273,10 +273,10 @@ function checkRetentions(oclcNumber, filterType, filterValue){
 	    });
 	    let bibRetainedHoldings = JSON.parse(response.getContentText());	    
 		let numberOfRecords = bibRetainedHoldings.numberOfRecords
-		if (numberOfRecords !== '0'){
-			return "TRUE"
-		} else {
+		if (numberOfRecords == 0){
 			return "FALSE"
+		} else {
+			return "TRUE"
 		}
 	  } else {
 	    Logger.log(service.getLastError());
