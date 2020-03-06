@@ -185,39 +185,40 @@ function fillMetadata(){
 	}
 
 function fillRetentionCheck(form){
-	   let filterType = form.filterType;
-	   let filterValue = form.filterValue;
-	   if (filterType == null || filterType == "" || filterValue == null || filterValue == "") {
-	     ui.alert("Filter parameters are required!");
-	     return;
-	   }		
-	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
-	    .getDataRange();
-	  var bookValues = dataRange.getValues();
-	  for(var row = 1; row < bookValues.length; row++){  
-		  var retentionCheck = checkRetentions(bookValues[row][0], filterType, filterValue);
-		  bookValues[row][6] = retentionCheck;
-	  }
+	var ui = SpreadsheetApp.getUi();	
+	let filterType = form.filterType;
+	let filterValue = form.filterValue;
+	if (filterType == null || filterType == "" || filterValue == null || filterValue == "") {
+		ui.alert("Filter parameters are required!");
+     return;
+	}		
+	var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+		.getDataRange();
+	var bookValues = dataRange.getValues();
+	for(var row = 1; row < bookValues.length; row++){  
+		var retentionCheck = checkRetentions(bookValues[row][0], filterType, filterValue);
+		bookValues[row][6] = retentionCheck;
+	}
 	  
-	  dataRange.setValues(bookValues);
+	dataRange.setValues(bookValues);
 }
 
 function fillRetentionInfo(form){
-	   let filterType = form.filterType;
-	   let filterValue = form.filterValue;
-	   if (filterType == null || filterType == "" || filterValue == null || filterValue == "") {
-	     ui.alert("Filter parameters are required!");
-	     return;
-	   }		
-	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
-	    .getDataRange();
-	  var bookValues = dataRange.getValues();
-	  for(var row = 1; row < bookValues.length; row++){  
-		  var retentionInfo = getRetentions(bookValues[row][0], filterType, filterValue);
-		  bookValues[row][7] = retentionInfo;
-	  }
-	  
-	  dataRange.setValues(bookValues);	
+	var ui = SpreadsheetApp.getUi();	
+	let filterType = form.filterType;
+	let filterValue = form.filterValue;
+	if (filterType == null || filterType == "" || filterValue == null || filterValue == "") {
+		ui.alert("Filter parameters are required!");
+		return;
+	}		
+	var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+	.getDataRange();
+	var bookValues = dataRange.getValues();
+	for(var row = 1; row < bookValues.length; row++){  
+		var retentionInfo = getRetentions(bookValues[row][0], filterType, filterValue);
+		bookValues[row][7] = retentionInfo;
+	}
+	dataRange.setValues(bookValues);	
 }
 
 function getMetadata(oclcNumber){
@@ -230,7 +231,7 @@ function getMetadata(oclcNumber){
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bib = new Metadata.Bib(response.getContentText());	    
+	    let bib = new Bib(response.getContentText());	    
 		    let metadata = {
 		    		title: bib.getTitle(),
 		    		author: bib.getAuthor(),
