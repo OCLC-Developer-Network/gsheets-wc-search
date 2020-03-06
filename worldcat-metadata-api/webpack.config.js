@@ -10,7 +10,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'var',
-    library: 'AppLib'
+    library: 'appLibrary'
   },  
   plugins: [
 	    new CopyPlugin([
