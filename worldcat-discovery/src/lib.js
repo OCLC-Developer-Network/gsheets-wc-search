@@ -1,36 +1,34 @@
-module.exports = class Bib {
-	constructor(result){
-		this.record = JSON.parse(result);
+function getBasicMetadata (result) {
+	let record = JSON.parse(result);
+	
+	let oclcNumber = record.identifier.oclcNumber
+	let title = record.title.mainTitles[0].text
+	title = title.replace(/\s\/+$/, "")
+
+	let author = record.contributor.creators[0].secondName.text + ', ' + record.contributor.creators[0].firstName.text
+
+	let isbns = record.identifier.isbns
+	
+	let isbnList = ""
+	if (isbns && isbns.length > 0) {
+		isbnList = isbns.join('|')
 	}
 	
-	getID(){
-		return this.record.identifier.oclcNumber	    
-	}
+	let mergedOclcNumbers = record.identifier.mergedOclcNumbers
 	
-	getOCLCNumber(){
-		return this.record.identifier.oclcNumber
-	}
+	let mergedOCNList = ""
+	if (mergedOclcNumbers && mergedOclcNumbers.length > 0) {
+		mergedOCNList = mergedOclcNumbers.join('|')
+	}	
+
 	
-	getTitle(){
-		let title = this.title.mainTitles[0]
-		title = title.replace(/\s\/+$/, "")
-		return title;
-	}
-	
-	getAuthor(){
-		let author = this.record.contributor.creators[0].secondName.text + ', ' + this.record.contributor.creators[0].firstName.text
-	
-		return author;
-	}
-	
-	getISBNs(){
-		let isbns = this.record.identifier.isbns
-		return isbns.join()	
-			
-	}
-	
-	getMergedOCLCNumbers(){
-		let mergedOclcNumbers = this.record.identifier.mergedOclcNumbers
-		return mergedOclcNumbers.join()
-	}
+	let bib = new Object(); 
+	bib.oclcNumber = oclcNumber
+	bib.title =  title
+	bib.author = author
+	bib.isbns =  isbnList
+	bib.mergedOCNs = mergedOCNList		    		
+
+    return bib
 }
+export {getBasicMetadata}

@@ -1,4 +1,4 @@
-const baseURL = 'https://americas.api.oclc.org/discovery/worldcat/v1'
+const discoveryBaseURL = 'https://americas.api.oclc.org/discovery/worldcat/v1'
 
 function onOpen() {
   SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
@@ -6,6 +6,8 @@ function onOpen() {
       .addItem('Add API Credentials', 'showDialog')
       .addSeparator()
       .addItem('Get Current OCLC Number', 'fillCurrentOCLCNumber')
+      .addSeparator()
+      .addItem('Get MergedOCNs', 'fillMergedOCNs')       
       .addSeparator()
       .addItem('Get Holdings Count', 'fillHoldings') 
       .addSeparator()
@@ -111,7 +113,20 @@ function fillCurrentOCLCNumber(){
 	  var bookValues = dataRange.getValues();
 	  for(var row = 1; row < bookValues.length; row++){
 		  let bib = getMetadata(bookValues[row][0])		 
-		  bookValues[row][1] = bib.getOCLCNumber();
+		  bookValues[row][1] = bib.oclcNumber;
+	  }
+	  
+	  dataRange.setValues(bookValues); 
+}
+
+function fillMergedOCNs(){
+
+	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+	    .getDataRange();
+	  var bookValues = dataRange.getValues();
+	  for(var row = 1; row < bookValues.length; row++){
+		  let bib = getMetadata(bookValues[row][0])		 
+		  bookValues[row][1] = bib.mergedOCNs;
 	  }
 	  
 	  dataRange.setValues(bookValues); 
@@ -138,6 +153,7 @@ function fillMetadata(){
 	  var TITLE_COLUMN = 3;
 	  var AUTHOR_COLUMN = 4;
 	  var ISBN_COLUMN = 5;
+	  var MERGEDOCNS_COLUMN = 8;
 
 	  // Get the current book information in the active sheet. The data
 	  // is placed into a 2D array.
@@ -156,13 +172,14 @@ function fillMetadata(){
 
 	      // Sometimes the API doesn't return the information needed.
 	      // In those cases, don't attempt to update the row further.
-	      if (!bookData || !bookData.details) {
+	      if (!bookData) {
 	        continue;
 	      }
 
 	      // The API might not have a title, so only fill it in
 	      // if the API returns one
 	      if(bookData.isbns){
+	    	  console.log(bookData.isbns)
 	        bookValues[row][ISBN_COLUMN] = bookData.isbns; 
 	      }
 	      
@@ -178,6 +195,11 @@ function fillMetadata(){
 	        bookValues[row][AUTHOR_COLUMN] =
 	          bookData.author; 
 	      }
+	      
+	      if(bookData.mergedOCNs){
+		        bookValues[row][MERGEDOCNS_COLUMN] =
+		          bookData.mergedOCNs; 
+		      }
 	  }
 	  
 	  // Put the updated book data values back into the spreadsheet.
@@ -224,20 +246,15 @@ function fillRetentionInfo(form){
 function getMetadata(oclcNumber){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = baseURL + '/bibs/' + oclcNumber;
+	    var url = discoveryBaseURL + '/bibs/' + oclcNumber;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bib = new Bib(response.getContentText());	    
-		    let metadata = {
-		    		title: bib.getTitle(),
-		    		author: bib.getAuthor(),
-		    		isbns: bib.getISBNs()
-		    }
-		    return metadata	    	    
+	    let bib = Metadata.getBasicMetadata(response.getContentText());	    
+		return bib	    	    
 	  } else {
 	    Logger.log(service.getLastError());
 	  }
@@ -246,7 +263,7 @@ function getMetadata(oclcNumber){
 function getHoldingsCount(oclcNumber, country){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = baseURL + '/bibs-holdings?oclcNumber=' + oclcNumber + '&heldInCountry=' + country;
+	    var url = discoveryBaseURL + '/bibs-holdings?oclcNumber=' + oclcNumber + '&heldInCountry=' + country;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -264,7 +281,7 @@ function getHoldingsCount(oclcNumber, country){
 function checkRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = baseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+	    var url = discoveryBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -286,7 +303,7 @@ function checkRetentions(oclcNumber, filterType, filterValue){
 function getRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = baseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+		var url = discoveryBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
