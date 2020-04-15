@@ -7,12 +7,14 @@ function onOpen() {
       .addSeparator()
       .addItem('Get Current OCLC Number', 'fillCurrentOCLCNumber')
       .addSeparator()
-      .addItem('Get MergedOCNs', 'fillMergedOCNs')       
-      .addSeparator()
-      .addItem('Get Holdings Count', 'fillHoldings') 
+      .addItem('Get MergedOCNs', 'fillMergedOCNs')        
       .addSeparator()
       .addItem('Get basic Metadata', 'fillMetadata')
       .addSeparator()
+      .addItem('Check Holding Status', 'showCheckHoldingsDialog')
+      .addSeparator()
+      .addItem('Get Holdings Count', 'showGetHoldingsCountDialog')      
+      .addSeparator()      
       .addItem('Check Retentions', 'showCheckRetentionsDialog')
       .addSeparator()
       .addItem('Get Retentions', 'showGetRetentionsDialog')      
@@ -38,6 +40,22 @@ function showDialog() {
 	      .setHeight(300);
 	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
 	      .showModalDialog(html, 'Enter API Credentials');
+	}
+
+function showCheckHoldingsDialog() {
+	  var html = HtmlService.createHtmlOutputFromFile('CheckHoldings')
+	      .setWidth(400)
+	      .setHeight(300);
+	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
+	      .showModalDialog(html, 'Enter Filter Criteria');
+	}
+
+function showGetHoldingsCountDialog() {
+	  var html = HtmlService.createHtmlOutputFromFile('GetHoldingsCount')
+	      .setWidth(400)
+	      .setHeight(300);
+	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
+	      .showModalDialog(html, 'Enter Filter Criteria');
 	}
 
 function showCheckRetentionsDialog() {
@@ -119,29 +137,23 @@ function fillCurrentOCLCNumber(){
 	  dataRange.setValues(bookValues); 
 }
 
-function fillMergedOCNs(){
-
-	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
-	    .getDataRange();
-	  var bookValues = dataRange.getValues();
-	  for(var row = 1; row < bookValues.length; row++){
-		  let bib = getMetadata(bookValues[row][0])		 
-		  bookValues[row][1] = bib.mergedOCNs;
-	  }
+function fillHoldingStatus(form){
+	let filterType = form.filterType;
+	let filterValue = form.filterValue;
+	if (filterType == null || filterType == "" || filterValue == null || filterValue == "") {
+		ui.alert("Filter parameters are required!");
+	 return;
+	}	
+	
+	var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+		.getDataRange();
+	var bookValues = dataRange.getValues();
+	for(var row = 1; row < bookValues.length; row++){
+		  let status = getHoldingStatus(bookValues[row][0], filterType, filterValue)		 
+		  bookValues[row][2] = status
+	}
 	  
-	  dataRange.setValues(bookValues); 
-}
-
-function fillHoldingCount(){
-	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
-	    .getDataRange();
-	  var bookValues = dataRange.getValues();
-	  for(var row = 1; row < bookValues.length; row++){  
-		  var holdingsCount = getHoldingsCount(bookValues[row][0]);
-		  bookValues[row][2] = holdingsFlag;
-	  }
-	  
-	  dataRange.setValues(bookValues);	
+	dataRange.setValues(bookValues);
 }
 
 function fillMetadata(){
@@ -153,7 +165,7 @@ function fillMetadata(){
 	  var TITLE_COLUMN = 3;
 	  var AUTHOR_COLUMN = 4;
 	  var ISBN_COLUMN = 5;
-	  var MERGEDOCNS_COLUMN = 8;
+	  var MERGEDOCNS_COLUMN = 6;
 
 	  // Get the current book information in the active sheet. The data
 	  // is placed into a 2D array.
@@ -206,6 +218,36 @@ function fillMetadata(){
 	  dataRange.setValues(bookValues);   
 	}
 
+function fillMergedOCNs(){
+
+	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+	    .getDataRange();
+	  var bookValues = dataRange.getValues();
+	  for(var row = 1; row < bookValues.length; row++){
+		  let bib = getMetadata(bookValues[row][0])		 
+		  bookValues[row][6] = bib.mergedOCNs;
+	  }
+	  
+	  dataRange.setValues(bookValues); 
+}
+
+function fillHoldingCount(form){
+	let filterValue = form.filterValue;
+	if (filterValue == null || filterValue == "") {
+		ui.alert("Filter parameters are required!");
+     return;
+	}	
+	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+	    .getDataRange();
+	  var bookValues = dataRange.getValues();
+	  for(var row = 1; row < bookValues.length; row++){  
+		  var holdingsCount = getHoldingsCount(bookValues[row][0], filterValue);
+		  bookValues[row][7] = holdingsCount;
+	  }
+	  
+	  dataRange.setValues(bookValues);	
+}
+
 function fillRetentionCheck(form){
 	var ui = SpreadsheetApp.getUi();	
 	let filterType = form.filterType;
@@ -219,7 +261,7 @@ function fillRetentionCheck(form){
 	var bookValues = dataRange.getValues();
 	for(var row = 1; row < bookValues.length; row++){  
 		var retentionCheck = checkRetentions(bookValues[row][0], filterType, filterValue);
-		bookValues[row][6] = retentionCheck;
+		bookValues[row][8] = retentionCheck;
 	}
 	  
 	dataRange.setValues(bookValues);
@@ -238,7 +280,7 @@ function fillRetentionInfo(form){
 	var bookValues = dataRange.getValues();
 	for(var row = 1; row < bookValues.length; row++){  
 		var retentionInfo = getRetentions(bookValues[row][0], filterType, filterValue);
-		bookValues[row][7] = retentionInfo;
+		bookValues[row][9] = retentionInfo;
 	}
 	dataRange.setValues(bookValues);	
 }
@@ -260,6 +302,29 @@ function getMetadata(oclcNumber){
 	  }
 }
 
+function getHoldingStatus(oclcNumber, filterType, filterValue){
+	  var service = getService();
+	  if (service.hasAccess()) {
+	    var url = discoveryBaseURL + '/bibs?q=no:' + oclcNumber + '&' + filterType + '=' + filterValue;
+	    var response = UrlFetchApp.fetch(url, {
+	      headers: {
+	        Authorization: 'Bearer ' + service.getAccessToken()        
+	      },
+	      validateHttpsCertificates: false
+	    });
+	    let bib_results = JSON.parse(response.getContentText());	 
+	    let holdingStatus = ""
+	    if (bib_results.numberOfRecords > 0) {
+	    	holdingStatus = "TRUE"
+	    } else {
+	    	holdingStatus = "FALSE"
+	    }
+		return holdingStatus
+	  } else {
+	    Logger.log(service.getLastError());
+	  }	
+}
+
 function getHoldingsCount(oclcNumber, country){
 	  var service = getService();
 	  if (service.hasAccess()) {
@@ -270,8 +335,8 @@ function getHoldingsCount(oclcNumber, country){
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bib = new Bib(response.getContentText());	    
-		let holdingsCount = bibHoldings.briefRecords.institutionHolding.totalHoldingCount
+	    let bib_holding_results = JSON.parse(response.getContentText());	    
+		let holdingsCount = bib_holding_results.briefRecords[0].institutionHolding.totalHoldingCount
 		return holdingsCount
 	  } else {
 	    Logger.log(service.getLastError());

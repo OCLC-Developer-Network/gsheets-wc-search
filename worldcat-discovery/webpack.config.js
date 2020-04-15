@@ -16,6 +16,8 @@ module.exports = {
 	    new CopyPlugin([
 	        'Code.js',
 	        'Page.html',
+	        'CheckHoldings.html',
+	        'GetHoldingsCount.html',
 	        'GetRetentions.html',
 	        'CheckRetentions.html',	        
 	        'appsscript.json',

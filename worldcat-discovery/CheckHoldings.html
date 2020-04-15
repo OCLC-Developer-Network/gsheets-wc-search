@@ -1,0 +1,36 @@
+
+      <div class="sidebar">
+         <form name="holdingCheck" id="holdingCheck">
+           <div class="block form-group">
+              <span style="color:white"><b>Check Holdings By</b></span>
+              <br>            
+              <select id="filterType" name="filterType">
+              <option value="heldBy">Institution</option>
+              <option value="heldByGroup">Group</option>
+              </select>
+              <br>
+              <span style="color:white"><b>Value</b></span>
+              <br>
+              <input type="text" id="filterValue" name="filterValue" placeholder="Value to filter by" value=""/>
+              <br>               
+           </div>
+           
+           <br>
+           
+         <div class="block form-group">
+              <input type="button" class="action" value="Check Holding status" onclick="submitForm()" />
+         </div>
+         <br>         
+         
+         </form>
+         <br>
+     </div>
+     
+         <script>
+        function submitForm(){
+            google.script.run.fillHoldingStatus(document.getElementById('holdingCheck'));
+            google.script.host.close() 
+          }        
+       
+        
+        </script>

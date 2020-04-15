@@ -1,0 +1,31 @@
+
+      <div class="sidebar">
+         <form name="holdingsCheck" id="holdingsCheck">
+           <div class="block form-group">
+              <span style="color:white"><b>Filter Holdings By Country</b></span>
+              <br>
+              <span style="color:white"><b>Country Code</b></span>
+              <br>
+              <input type="text" id="filterValue" name="filterValue" placeholder="Value to filter by" value=""/>
+              <br>               
+           </div>
+           
+           <br>
+           
+         <div class="block form-group">
+              <input type="button" class="action" value="Check Holdings" onclick="submitForm()" />
+         </div>
+         <br>         
+         
+         </form>
+         <br>
+     </div>
+     
+         <script>
+        function submitForm(){
+            google.script.run.fillHoldingCount(document.getElementById('holdingsCheck'));
+            google.script.host.close() 
+          }        
+       
+        
+        </script>
