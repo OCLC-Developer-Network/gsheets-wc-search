@@ -136,7 +136,7 @@ function fillMetadata(){
 
 	      // Sometimes the API doesn't return the information needed.
 	      // In those cases, don't attempt to update the row further.
-	      if (!bookData || !bookData.details) {
+	      if (!bookData) {
 	        continue;
 	      }
 
@@ -208,20 +208,8 @@ function getMetadata(oclcNumber){
 	      }
 	    });
 	    var content = parseMARCFromXML(response.getContentText());
-	    appLibrary.parseMarc(content)
-	    .then(record => {	    
-		    let metadata = {
-		    		title: appLibrary.getTitle(record),
-		    		author: appLibrary.getAuthor(record),
-		    		isbns: appLibrary.getISBNs(record)
-		    }
-		    return metadata
-	    })
-	    .catch(error => {
-	    	Logger.log(error)
-	    	let metadata = {}
-	    	return metadata
-	    })
+	    let bib = appLibrary.parseMarcData(content)
+	    return bib
 	    
 	  } else {
 	    Logger.log(service.getLastError());
