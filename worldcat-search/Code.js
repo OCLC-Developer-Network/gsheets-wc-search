@@ -1,4 +1,4 @@
-const discoveryBaseURL = 'https://americas.api.oclc.org/discovery/worldcat/v1'
+const worldcatSearchBaseURL = 'https://americas.discovery.api.oclc.org/worldcat/v2'
 
 function onOpen() {
   SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
@@ -288,7 +288,7 @@ function fillRetentionInfo(form){
 function getMetadata(oclcNumber){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = discoveryBaseURL + '/bibs/' + oclcNumber;
+	    var url = worldcatSearchBaseURL + '/bibs/' + oclcNumber;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -305,7 +305,7 @@ function getMetadata(oclcNumber){
 function getHoldingStatus(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = discoveryBaseURL + '/bibs?q=no:' + oclcNumber + '&' + filterType + '=' + filterValue;
+	    var url = worldcatSearchBaseURL + '/bibs?q=no:' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -328,7 +328,7 @@ function getHoldingStatus(oclcNumber, filterType, filterValue){
 function getHoldingsCount(oclcNumber, country){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = discoveryBaseURL + '/bibs-holdings?oclcNumber=' + oclcNumber + '&heldInCountry=' + country;
+	    var url = worldcatSearchBaseURL + '/bibs-holdings?oclcNumber=' + oclcNumber + '&heldInCountry=' + country;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -346,7 +346,7 @@ function getHoldingsCount(oclcNumber, country){
 function checkRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = discoveryBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+	    var url = worldcatSearchBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
@@ -368,7 +368,7 @@ function checkRetentions(oclcNumber, filterType, filterValue){
 function getRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = discoveryBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+		var url = worldcatSearchBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        

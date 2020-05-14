@@ -1,4 +1,5 @@
 const baseURL = 'https://worldcat.org'
+const metadataBaseURL = 'https://americas.metadata.api.oclc.org/worldcat/v1'
 
 function onOpen() {
   SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
@@ -7,9 +8,19 @@ function onOpen() {
       .addSeparator()
       .addItem('Get Current OCLC Number', 'fillCurrentOCLCNumber')
       .addSeparator()
-      .addItem('Check Holdings', 'fillHoldings') 
+      .addItem('Check Holdings', 'fillHoldingStatus') 
       .addSeparator()
-      .addItem('Get basic Metadata', 'fillMetadata')       
+      .addItem('Get MergedOCNs', 'fillMergedOCNs')        
+      .addSeparator()
+      .addItem('Get basic Metadata', 'fillMetadata')
+      .addSeparator()
+      .addItem('Check Holding Status', 'showCheckHoldingsDialog')
+      .addSeparator()
+      .addItem('Get Holdings Count', 'showGetHoldingsCountDialog')      
+      .addSeparator()      
+      .addItem('Check Retentions', 'showCheckRetentionsDialog')
+      .addSeparator()
+      .addItem('Get Retentions', 'showGetRetentionsDialog')         
       .addToUi();
 }
 
@@ -25,6 +36,38 @@ function showSidebar() {
   SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
       .showSidebar(html);    
 }
+
+function showCheckHoldingsDialog() {
+	  var html = HtmlService.createHtmlOutputFromFile('CheckHoldings')
+	      .setWidth(400)
+	      .setHeight(300);
+	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
+	      .showModalDialog(html, 'Enter Filter Criteria');
+	}
+
+function showGetHoldingsCountDialog() {
+	  var html = HtmlService.createHtmlOutputFromFile('GetHoldingsCount')
+	      .setWidth(400)
+	      .setHeight(300);
+	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
+	      .showModalDialog(html, 'Enter Filter Criteria');
+	}
+
+function showCheckRetentionsDialog() {
+	  var html = HtmlService.createHtmlOutputFromFile('CheckRetentions')
+	      .setWidth(400)
+	      .setHeight(300);
+	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
+	      .showModalDialog(html, 'Enter Filter Criteria');
+	}
+
+function showGetRetentionsDialog() {
+	  var html = HtmlService.createHtmlOutputFromFile('GetRetentions')
+	      .setWidth(400)
+	      .setHeight(300);
+	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
+	      .showModalDialog(html, 'Enter Filter Criteria');
+	}
 
 function showDialog() {
 	  var html = HtmlService.createHtmlOutputFromFile('Page')
@@ -97,12 +140,12 @@ function fillCurrentOCLCNumber(){
 	  dataRange.setValues(bookValues); 
 }
 
-function fillHoldings(){
+function fillHoldingStatus(){
 	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
 	    .getDataRange();
 	  var bookValues = dataRange.getValues();
 	  for(var row = 1; row < bookValues.length; row++){  
-		  var holdingsFlag = checkHoldings(bookValues[row][0]);
+		  var holdingsFlag = getHoldingStatus(bookValues[row][0]);
 		  bookValues[row][2] = holdingsFlag;
 	  }
 	  
@@ -164,6 +207,74 @@ function fillMetadata(){
 	  dataRange.setValues(bookValues);   
 	}
 
+function fillMergedOCNs(){
+
+	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+	    .getDataRange();
+	  var bookValues = dataRange.getValues();
+	  for(var row = 1; row < bookValues.length; row++){
+		  let bib = getMetadata(bookValues[row][0])		 
+		  bookValues[row][6] = bib.mergedOCNs;
+	  }
+	  
+	  dataRange.setValues(bookValues); 
+}
+
+function fillHoldingCount(form){
+	let filterValue = form.filterValue;
+	if (filterValue == null || filterValue == "") {
+		ui.alert("Filter parameters are required!");
+   return;
+	}	
+	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+	    .getDataRange();
+	  var bookValues = dataRange.getValues();
+	  for(var row = 1; row < bookValues.length; row++){  
+		  var holdingsCount = getHoldingsCount(bookValues[row][0], filterValue);
+		  bookValues[row][7] = holdingsCount;
+	  }
+	  
+	  dataRange.setValues(bookValues);	
+}
+
+function fillRetentionCheck(form){
+	var ui = SpreadsheetApp.getUi();	
+	let filterType = form.filterType;
+	let filterValue = form.filterValue;
+	if (filterType == null || filterType == "" || filterValue == null || filterValue == "") {
+		ui.alert("Filter parameters are required!");
+   return;
+	}		
+	var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+		.getDataRange();
+	var bookValues = dataRange.getValues();
+	for(var row = 1; row < bookValues.length; row++){  
+		var retentionCheck = checkRetentions(bookValues[row][0], filterType, filterValue);
+		bookValues[row][8] = retentionCheck;
+	}
+	  
+	dataRange.setValues(bookValues);
+}
+
+function fillRetentionInfo(form){
+	var ui = SpreadsheetApp.getUi();	
+	let filterType = form.filterType;
+	let filterValue = form.filterValue;
+	if (filterType == null || filterType == "" || filterValue == null || filterValue == "") {
+		ui.alert("Filter parameters are required!");
+		return;
+	}		
+	var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+	.getDataRange();
+	var bookValues = dataRange.getValues();
+	for(var row = 1; row < bookValues.length; row++){  
+		var retentionInfo = getRetentions(bookValues[row][0], filterType, filterValue);
+		bookValues[row][9] = retentionInfo;
+	}
+	dataRange.setValues(bookValues);	
+}
+
+
 function getCurrentOCLCNumber(oclcNumber) {
 	  var service = getService();
 	  if (service.hasAccess()) {
@@ -181,7 +292,7 @@ function getCurrentOCLCNumber(oclcNumber) {
 	  }
 	}
 
-function checkHoldings(oclcNumber) {
+function getHoldingStatus(oclcNumber) {
 	  var service = getService();
 	  if (service.hasAccess()) {
 	    var url = baseURL + '/ih/checkholdings?oclcNumber=' + oclcNumber;
@@ -211,6 +322,69 @@ function getMetadata(oclcNumber){
 	    let bib = appLibrary.parseMarcData(content)
 	    return bib
 	    
+	  } else {
+	    Logger.log(service.getLastError());
+	  }
+}
+
+function getHoldingsCount(oclcNumber, country){
+	  var service = getService();
+	  if (service.hasAccess()) {
+	    var url = metadataBaseURL + '/bibs-holdings?oclcNumber=' + oclcNumber + '&heldInCountry=' + country;
+	    var response = UrlFetchApp.fetch(url, {
+	      headers: {
+	        Authorization: 'Bearer ' + service.getAccessToken()        
+	      },
+	      validateHttpsCertificates: false
+	    });
+	    let bib_holding_results = JSON.parse(response.getContentText());	    
+		let holdingsCount = bib_holding_results.briefRecords[0].institutionHolding.totalHoldingCount
+		return holdingsCount
+	  } else {
+	    Logger.log(service.getLastError());
+	  }
+}
+
+function checkRetentions(oclcNumber, filterType, filterValue){
+	  var service = getService();
+	  if (service.hasAccess()) {
+	    var url = metadataBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+	    var response = UrlFetchApp.fetch(url, {
+	      headers: {
+	        Authorization: 'Bearer ' + service.getAccessToken()        
+	      },
+	      validateHttpsCertificates: false
+	    });
+	    let bibRetainedHoldings = JSON.parse(response.getContentText());	    
+		let numberOfRecords = bibRetainedHoldings.numberOfRecords
+		if (numberOfRecords == 0){
+			return "FALSE"
+		} else {
+			return "TRUE"
+		}
+	  } else {
+	    Logger.log(service.getLastError());
+	  }
+}
+
+function getRetentions(oclcNumber, filterType, filterValue){
+	  var service = getService();
+	  if (service.hasAccess()) {
+		var url = metadataBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+	    var response = UrlFetchApp.fetch(url, {
+	      headers: {
+	        Authorization: 'Bearer ' + service.getAccessToken()        
+	      },
+	      validateHttpsCertificates: false
+	    });
+	    let bibRetainedHoldings = JSON.parse(response.getContentText());	    
+      if (bibRetainedHoldings.numberOfRecords == 0){
+          return "None"
+      } else {  
+			let retentionSet = bibRetainedHoldings.briefRecords[0].institutionHolding.briefHoldings
+			let oclcSymbolsRetentions = retentionSet.map(retention => retention.oclcSymbol)
+			return oclcSymbolsRetentions.join();
+      }
 	  } else {
 	    Logger.log(service.getLastError());
 	  }
