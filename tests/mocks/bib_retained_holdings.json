@@ -1,0 +1,35 @@
+{
+    "numberOfRecords": 1,
+    "briefRecords": [
+        {
+            "oclcNumber": "27972555",
+            "title": "Design, form, and chaos",
+            "creator": "Paul Rand",
+            "date": "1993",
+            "language": "eng",
+            "generalFormat": "Book",
+            "specificFormat": "PrintBook",
+            "publisher": "Yale University Press",
+            "mergedOclcNumbers": [
+                "1008281567"
+            ],
+            "catalogingInfo": {
+                "catalogingAgency": "DLC",
+                "transcribingAgency": "DLC"
+            },
+            "institutionHolding": {
+                "totalHoldingCount": 902,
+                "briefHoldings": [
+                    {
+                        "country": "US",
+                        "state": "NY",
+                        "oclcSymbol": "VKM",
+                        "institutionNumber": "3368",
+                        "institutionName": "SIENA COL",
+                        "illStatus": "S"
+                    }
+                ]
+            }
+        }
+    ]
+}

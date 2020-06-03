@@ -1,0 +1,295 @@
+{
+    "identifier": {
+        "oclcNumber": "1",
+        "lccn": "63011276",
+        "externalIdentifiers": [
+            {
+                "oclcSymbol": "IHI",
+                "oaiSetName": "/p114401coll4",
+                "contentTypeId": "CNTNT"
+            },
+            {
+                "oclcSymbol": "OCL",
+                "oaiSetName": "/p104301coll10",
+                "contentTypeId": "CNTNT"
+            },
+            {
+                "oclcSymbol": "OCL",
+                "oaiSetName": "/p16243coll3",
+                "contentTypeId": "CNTNT"
+            }
+        ],
+        "mergedOclcNumbers": [
+            "6567842",
+            "9987701",
+            "53095235",
+            "433981287"
+        ]
+    },
+    "title": {
+        "mainTitles": [
+            {
+                "text": "The Rand McNally book of favorite pastimes / illustrated by Dorothy Grider."
+            }
+        ]
+    },
+    "contributor": {
+        "creators": [
+            {
+                "firstName": {
+                    "text": "Dorothy."
+                },
+                "secondName": {
+                    "text": "Grider"
+                },
+                "type": "person"
+            },
+            {
+                "firstName": {
+                    "text": "Mabel."
+                },
+                "secondName": {
+                    "text": "Watts"
+                },
+                "type": "person"
+            },
+            {
+                "firstName": {
+                    "text": "Virginia"
+                },
+                "secondName": {
+                    "text": "Hunter"
+                },
+                "type": "person",
+                "creatorNotes": [
+                    "1921-2011."
+                ]
+            }
+        ]
+    },
+    "subjects": [
+        {
+            "subjectName": {
+                "text": "Amusements Juvenile fiction."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Ballet dancing Juvenile fiction."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Horsemanship Juvenile fiction."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Baton twirling Juvenile fiction."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Swimming Juvenile fiction."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Children's stories."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Short stories."
+            },
+            "vocabulary": "LC subject headings for children's literature",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Cuentos norteamericanos S. XX."
+            },
+            "vocabulary": "embne",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Amusements."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Ballet dancing."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Baton twirling."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Children's stories."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Horsemanship."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Swimming."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Collection Bandes dessinées."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "genreFormTerm"
+        },
+        {
+            "subjectName": {
+                "text": "Bandes dessinées"
+            },
+            "vocabulary": "Répertoire de vedettes-matière",
+            "subjectType": "genreFormTerm"
+        },
+        {
+            "subjectName": {
+                "text": "Fiction."
+            },
+            "vocabulary": "fast",
+            "subjectType": "genreFormTerm"
+        },
+        {
+            "subjectName": {
+                "text": "Juvenile works."
+            },
+            "vocabulary": "fast",
+            "subjectType": "genreFormTerm"
+        },
+        {
+            "subjectName": {
+                "text": "Short stories."
+            },
+            "vocabulary": "fast",
+            "subjectType": "genreFormTerm"
+        },
+        {
+            "subjectName": {
+                "text": "Short stories."
+            },
+            "vocabulary": "lcgft",
+            "subjectType": "genreFormTerm"
+        }
+    ],
+    "classification": {
+        "dewey": "934",
+        "lc": "PZ5 .R1924"
+    },
+    "publishers": [
+        {
+            "publisherName": {
+                "text": "Rand McNally"
+            },
+            "publicationPlace": "Chicago :"
+        }
+    ],
+    "date": {
+        "publicationDate": "[1963]",
+        "createDate": "19690526",
+        "replaceDate": "20200526"
+    },
+    "language": {
+        "catalogingLanguage": "eng"
+    },
+    "edition": {},
+    "note": {},
+    "format": {
+        "generalFormat": "Book",
+        "specificFormat": "PrintBook",
+        "materialTypes": [
+            "fic",
+            "jau",
+            "url"
+        ]
+    },
+    "musicInfo": {},
+    "digitalAccessAndLocations": [
+        {
+            "uri": "http://worldcat.org/oclc/1/viewonline",
+            "materialSpecified": "View Online"
+        }
+    ],
+    "description": {
+        "physicalDescription": "110 pages : color illustrations ; 33 cm",
+        "genres": [
+            "Collection Bandes dessinées.",
+            "Bandes dessinées",
+            "Fiction.",
+            "Juvenile works.",
+            "Short stories.",
+            "Juvenile fiction."
+        ],
+        "summaries": [
+            {
+                "text": "Boys and girls in these four stories work hard to master ballet dancing, riding, baton twirling, and swimming."
+            }
+        ],
+        "contents": [
+            {
+                "contentNote": {
+                    "text": "Little ballerina / by D. Grider -- Little horseman / by M. Watts -- Little majorette / by D. Grider -- Little swimmers / by V. Hunter."
+                },
+                "titles": [
+                    "Little ballerina /",
+                    "Little horseman /",
+                    "Little majorette /",
+                    "Little swimmers /"
+                ],
+                "statementsOfResponsibility": [
+                    "by D. Grider --",
+                    "by M. Watts --",
+                    "by D. Grider --",
+                    "by V. Hunter."
+                ]
+            }
+        ],
+        "peerReviewed": "N"
+    },
+    "related": {},
+    "work": {
+        "id": "8906894073",
+        "count": 1
+    },
+    "database": {
+        "source": "xwc",
+        "collection": "xwc"
+    }
+}

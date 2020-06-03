@@ -1,0 +1,2355 @@
+{
+    "numberOfRecords": 1,
+    "briefRecords": [
+        {
+            "oclcNumber": "318877925",
+            "title": "Simon's cat",
+            "creator": "Simon. Tofield",
+            "date": "2009",
+            "language": "eng",
+            "generalFormat": "Book",
+            "specificFormat": "PrintBook",
+            "edition": "1st ed.",
+            "publisher": "Grand Central Pub.",
+            "mergedOclcNumbers": [
+                "877908501",
+                "979175514",
+                "981548811",
+                "990719089",
+                "993246604",
+                "1005002644",
+                "1011917725",
+                "1016539262",
+                "1020206933",
+                "1043441377",
+                "1057597575",
+                "1089599685",
+                "1145205644"
+            ],
+            "catalogingInfo": {
+                "catalogingAgency": "DLC",
+                "transcribingAgency": "DLC"
+            },
+            "institutionHolding": {
+                "totalHoldingCount": 463,
+                "briefHoldings": [
+                    {
+                        "oclcSymbol": "KF6",
+                        "institutionNumber": "12905",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10934"
+                    },
+                    {
+                        "oclcSymbol": "IS#",
+                        "institutionNumber": "16352",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86330"
+                    },
+                    {
+                        "oclcSymbol": "MQO",
+                        "institutionNumber": "8952",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12280"
+                    },
+                    {
+                        "oclcSymbol": "HQD",
+                        "institutionNumber": "6731",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12557"
+                    },
+                    {
+                        "oclcSymbol": "TEFOD",
+                        "institutionNumber": "36101",
+                        "self": "https://worldcat.org/oclc-config/institution/data/64744"
+                    },
+                    {
+                        "oclcSymbol": "WL8",
+                        "institutionNumber": "17083",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9006"
+                    },
+                    {
+                        "oclcSymbol": "NCDCP",
+                        "institutionNumber": "45857",
+                        "self": "https://worldcat.org/oclc-config/institution/data/7923"
+                    },
+                    {
+                        "oclcSymbol": "YQR",
+                        "institutionNumber": "394",
+                        "self": "https://worldcat.org/oclc-config/institution/data/70886"
+                    },
+                    {
+                        "oclcSymbol": "DEL",
+                        "institutionNumber": "3417",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6589"
+                    },
+                    {
+                        "oclcSymbol": "AUTDA",
+                        "institutionNumber": "75080",
+                        "self": "https://worldcat.org/oclc-config/institution/data/262539"
+                    },
+                    {
+                        "oclcSymbol": "MR7",
+                        "institutionNumber": "13701",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12327"
+                    },
+                    {
+                        "oclcSymbol": "ZMY",
+                        "institutionNumber": "6946",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85992"
+                    },
+                    {
+                        "oclcSymbol": "P@W",
+                        "institutionNumber": "30544",
+                        "self": "https://worldcat.org/oclc-config/institution/data/7482"
+                    },
+                    {
+                        "oclcSymbol": "ZMZ",
+                        "institutionNumber": "6947",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85991"
+                    },
+                    {
+                        "oclcSymbol": "CO2",
+                        "institutionNumber": "12183",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8648"
+                    },
+                    {
+                        "oclcSymbol": "TS249",
+                        "institutionNumber": "63176",
+                        "self": "https://worldcat.org/oclc-config/institution/data/127950"
+                    },
+                    {
+                        "oclcSymbol": "HHD",
+                        "institutionNumber": "5155",
+                        "self": "https://worldcat.org/oclc-config/institution/data/84704"
+                    },
+                    {
+                        "oclcSymbol": "MID",
+                        "institutionNumber": "1550",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85627"
+                    },
+                    {
+                        "oclcSymbol": "N$T",
+                        "institutionNumber": "29459",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56279"
+                    },
+                    {
+                        "oclcSymbol": "MP8",
+                        "institutionNumber": "13290",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12266"
+                    },
+                    {
+                        "oclcSymbol": "WSD",
+                        "institutionNumber": "2160",
+                        "self": "https://worldcat.org/oclc-config/institution/data/68778"
+                    },
+                    {
+                        "oclcSymbol": "PCX",
+                        "institutionNumber": "10548",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16096"
+                    },
+                    {
+                        "oclcSymbol": "UMQ",
+                        "institutionNumber": "3829",
+                        "self": "https://worldcat.org/oclc-config/institution/data/66142"
+                    },
+                    {
+                        "oclcSymbol": "OCWMS",
+                        "institutionNumber": "59357",
+                        "self": "https://worldcat.org/oclc-config/institution/data/91475"
+                    },
+                    {
+                        "oclcSymbol": "WIM",
+                        "institutionNumber": "1343",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6671"
+                    },
+                    {
+                        "oclcSymbol": "VHP",
+                        "institutionNumber": "2156",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16113"
+                    },
+                    {
+                        "oclcSymbol": "SRC",
+                        "institutionNumber": "789",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15180"
+                    },
+                    {
+                        "oclcSymbol": "YX7",
+                        "institutionNumber": "18645",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12310"
+                    },
+                    {
+                        "oclcSymbol": "HCO",
+                        "institutionNumber": "7605",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12129"
+                    },
+                    {
+                        "oclcSymbol": "WV3",
+                        "institutionNumber": "12446",
+                        "self": "https://worldcat.org/oclc-config/institution/data/75772"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "IS#",
+                        "institutionNumber": "16352",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86330"
+                    },
+                    {
+                        "oclcSymbol": "TS249",
+                        "institutionNumber": "63176",
+                        "self": "https://worldcat.org/oclc-config/institution/data/127950"
+                    },
+                    {
+                        "oclcSymbol": "TEFOD",
+                        "institutionNumber": "36101",
+                        "self": "https://worldcat.org/oclc-config/institution/data/64744"
+                    },
+                    {
+                        "oclcSymbol": "N$T",
+                        "institutionNumber": "29459",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56279"
+                    },
+                    {
+                        "oclcSymbol": "YQR",
+                        "institutionNumber": "394",
+                        "self": "https://worldcat.org/oclc-config/institution/data/70886"
+                    },
+                    {
+                        "oclcSymbol": "UMQ",
+                        "institutionNumber": "3829",
+                        "self": "https://worldcat.org/oclc-config/institution/data/66142"
+                    },
+                    {
+                        "oclcSymbol": "OCWMS",
+                        "institutionNumber": "59357",
+                        "self": "https://worldcat.org/oclc-config/institution/data/91475"
+                    },
+                    {
+                        "oclcSymbol": "AUTDA",
+                        "institutionNumber": "75080",
+                        "self": "https://worldcat.org/oclc-config/institution/data/262539"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "RECBK",
+                        "institutionNumber": "67164",
+                        "self": "https://worldcat.org/oclc-config/institution/data/134658"
+                    },
+                    {
+                        "oclcSymbol": "ZMY",
+                        "institutionNumber": "6946",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85992"
+                    },
+                    {
+                        "oclcSymbol": "WV3",
+                        "institutionNumber": "12446",
+                        "self": "https://worldcat.org/oclc-config/institution/data/75772"
+                    },
+                    {
+                        "oclcSymbol": "ZMZ",
+                        "institutionNumber": "6947",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85991"
+                    },
+                    {
+                        "oclcSymbol": "BTCTA",
+                        "institutionNumber": "45931",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85257"
+                    },
+                    {
+                        "oclcSymbol": "OSD",
+                        "institutionNumber": "30380",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85901"
+                    },
+                    {
+                        "oclcSymbol": "ADR",
+                        "institutionNumber": "4827",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8475"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "S#L",
+                        "institutionNumber": "25531",
+                        "self": "https://worldcat.org/oclc-config/institution/data/62362"
+                    },
+                    {
+                        "oclcSymbol": "ALBRS",
+                        "institutionNumber": "35922",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85582"
+                    },
+                    {
+                        "oclcSymbol": "ROC",
+                        "institutionNumber": "2236",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12177"
+                    },
+                    {
+                        "oclcSymbol": "BTCTA",
+                        "institutionNumber": "45931",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85257"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "IHE",
+                        "institutionNumber": "1955",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9882"
+                    },
+                    {
+                        "oclcSymbol": "IS#",
+                        "institutionNumber": "16352",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86330"
+                    },
+                    {
+                        "oclcSymbol": "TS249",
+                        "institutionNumber": "63176",
+                        "self": "https://worldcat.org/oclc-config/institution/data/127950"
+                    },
+                    {
+                        "oclcSymbol": "TEFOD",
+                        "institutionNumber": "36101",
+                        "self": "https://worldcat.org/oclc-config/institution/data/64744"
+                    },
+                    {
+                        "oclcSymbol": "YQR",
+                        "institutionNumber": "394",
+                        "self": "https://worldcat.org/oclc-config/institution/data/70886"
+                    },
+                    {
+                        "oclcSymbol": "ALBRS",
+                        "institutionNumber": "35922",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85582"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "ALBRS",
+                        "institutionNumber": "35922",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85582"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "N$T",
+                        "institutionNumber": "29459",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56279"
+                    },
+                    {
+                        "oclcSymbol": "DMM",
+                        "institutionNumber": "122",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14235"
+                    },
+                    {
+                        "oclcSymbol": "UMQ",
+                        "institutionNumber": "3829",
+                        "self": "https://worldcat.org/oclc-config/institution/data/66142"
+                    },
+                    {
+                        "oclcSymbol": "OCWMS",
+                        "institutionNumber": "59357",
+                        "self": "https://worldcat.org/oclc-config/institution/data/91475"
+                    },
+                    {
+                        "oclcSymbol": "AUTDA",
+                        "institutionNumber": "75080",
+                        "self": "https://worldcat.org/oclc-config/institution/data/262539"
+                    },
+                    {
+                        "oclcSymbol": "KYB",
+                        "institutionNumber": "12883",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10904"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "ZMY",
+                        "institutionNumber": "6946",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85992"
+                    },
+                    {
+                        "oclcSymbol": "ZWA",
+                        "institutionNumber": "17975",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15214"
+                    },
+                    {
+                        "oclcSymbol": "WV3",
+                        "institutionNumber": "12446",
+                        "self": "https://worldcat.org/oclc-config/institution/data/75772"
+                    },
+                    {
+                        "oclcSymbol": "ZMZ",
+                        "institutionNumber": "6947",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85991"
+                    },
+                    {
+                        "oclcSymbol": "RECBK",
+                        "institutionNumber": "67164",
+                        "self": "https://worldcat.org/oclc-config/institution/data/134658"
+                    },
+                    {
+                        "oclcSymbol": "ALBRS",
+                        "institutionNumber": "35922",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85582"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "N$T",
+                        "institutionNumber": "29459",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56279"
+                    },
+                    {
+                        "oclcSymbol": "UMQ",
+                        "institutionNumber": "3829",
+                        "self": "https://worldcat.org/oclc-config/institution/data/66142"
+                    },
+                    {
+                        "oclcSymbol": "OCWMS",
+                        "institutionNumber": "59357",
+                        "self": "https://worldcat.org/oclc-config/institution/data/91475"
+                    },
+                    {
+                        "oclcSymbol": "AUTDA",
+                        "institutionNumber": "75080",
+                        "self": "https://worldcat.org/oclc-config/institution/data/262539"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "ZMY",
+                        "institutionNumber": "6946",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85992"
+                    },
+                    {
+                        "oclcSymbol": "WV3",
+                        "institutionNumber": "12446",
+                        "self": "https://worldcat.org/oclc-config/institution/data/75772"
+                    },
+                    {
+                        "oclcSymbol": "ZMZ",
+                        "institutionNumber": "6947",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85991"
+                    },
+                    {
+                        "oclcSymbol": "S#L",
+                        "institutionNumber": "25531",
+                        "self": "https://worldcat.org/oclc-config/institution/data/62362"
+                    },
+                    {
+                        "oclcSymbol": "OSD",
+                        "institutionNumber": "30380",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85901"
+                    },
+                    {
+                        "oclcSymbol": "LRU",
+                        "institutionNumber": "395",
+                        "self": "https://worldcat.org/oclc-config/institution/data/5461"
+                    },
+                    {
+                        "oclcSymbol": "ALBRS",
+                        "institutionNumber": "35922",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85582"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "ROC",
+                        "institutionNumber": "2236",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12177"
+                    },
+                    {
+                        "oclcSymbol": "KNJ",
+                        "institutionNumber": "7682",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6528"
+                    },
+                    {
+                        "oclcSymbol": "LIQ",
+                        "institutionNumber": "16076",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6950"
+                    },
+                    {
+                        "oclcSymbol": "JQW",
+                        "institutionNumber": "5385",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8528"
+                    },
+                    {
+                        "oclcSymbol": "ZHK",
+                        "institutionNumber": "9744",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9051"
+                    },
+                    {
+                        "oclcSymbol": "KCE",
+                        "institutionNumber": "5024",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10951"
+                    },
+                    {
+                        "oclcSymbol": "SAP",
+                        "institutionNumber": "1583",
+                        "self": "https://worldcat.org/oclc-config/institution/data/62731"
+                    },
+                    {
+                        "oclcSymbol": "KCL",
+                        "institutionNumber": "2671",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14552"
+                    },
+                    {
+                        "oclcSymbol": "QT5",
+                        "institutionNumber": "17040",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15735"
+                    },
+                    {
+                        "oclcSymbol": "OSD",
+                        "institutionNumber": "30380",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85901"
+                    },
+                    {
+                        "oclcSymbol": "B@L",
+                        "institutionNumber": "26317",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11441"
+                    },
+                    {
+                        "oclcSymbol": "LTP",
+                        "institutionNumber": "27407",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11062"
+                    },
+                    {
+                        "oclcSymbol": "JQR",
+                        "institutionNumber": "5380",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8509"
+                    },
+                    {
+                        "oclcSymbol": "OKE",
+                        "institutionNumber": "1336",
+                        "self": "https://worldcat.org/oclc-config/institution/data/82434"
+                    },
+                    {
+                        "oclcSymbol": "BIB",
+                        "institutionNumber": "11505",
+                        "self": "https://worldcat.org/oclc-config/institution/data/41108"
+                    },
+                    {
+                        "oclcSymbol": "UWB",
+                        "institutionNumber": "11868",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16074"
+                    },
+                    {
+                        "oclcSymbol": "AOP",
+                        "institutionNumber": "355",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15078"
+                    },
+                    {
+                        "oclcSymbol": "YT6",
+                        "institutionNumber": "17969",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15683"
+                    },
+                    {
+                        "oclcSymbol": "BVRDM",
+                        "institutionNumber": "35839",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16438"
+                    },
+                    {
+                        "oclcSymbol": "KL6",
+                        "institutionNumber": "12954",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10970"
+                    },
+                    {
+                        "oclcSymbol": "ZPT",
+                        "institutionNumber": "8408",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8458"
+                    },
+                    {
+                        "oclcSymbol": "KLP",
+                        "institutionNumber": "2549",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10948"
+                    },
+                    {
+                        "oclcSymbol": "ZDX",
+                        "institutionNumber": "19598",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9863"
+                    },
+                    {
+                        "oclcSymbol": "HHD",
+                        "institutionNumber": "5155",
+                        "self": "https://worldcat.org/oclc-config/institution/data/84704"
+                    },
+                    {
+                        "oclcSymbol": "JRK",
+                        "institutionNumber": "5399",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8547"
+                    },
+                    {
+                        "oclcSymbol": "L8L",
+                        "institutionNumber": "29714",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12479"
+                    },
+                    {
+                        "oclcSymbol": "N$S",
+                        "institutionNumber": "27417",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9029"
+                    },
+                    {
+                        "oclcSymbol": "JRD",
+                        "institutionNumber": "5392",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8540"
+                    },
+                    {
+                        "oclcSymbol": "DMM",
+                        "institutionNumber": "122",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14235"
+                    },
+                    {
+                        "oclcSymbol": "ORL",
+                        "institutionNumber": "364",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8971"
+                    },
+                    {
+                        "oclcSymbol": "HSA",
+                        "institutionNumber": "2313",
+                        "self": "https://worldcat.org/oclc-config/institution/data/49956"
+                    },
+                    {
+                        "oclcSymbol": "IGA",
+                        "institutionNumber": "246",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15497"
+                    },
+                    {
+                        "oclcSymbol": "WIM",
+                        "institutionNumber": "1343",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6671"
+                    },
+                    {
+                        "oclcSymbol": "BPL",
+                        "institutionNumber": "1585",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12587"
+                    },
+                    {
+                        "oclcSymbol": "JFN",
+                        "institutionNumber": "5702",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10075"
+                    },
+                    {
+                        "oclcSymbol": "DE@",
+                        "institutionNumber": "12600",
+                        "self": "https://worldcat.org/oclc-config/institution/data/45065"
+                    },
+                    {
+                        "oclcSymbol": "NOG",
+                        "institutionNumber": "8551",
+                        "self": "https://worldcat.org/oclc-config/institution/data/57675"
+                    },
+                    {
+                        "oclcSymbol": "MYL",
+                        "institutionNumber": "3662",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56218"
+                    },
+                    {
+                        "oclcSymbol": "T3N",
+                        "institutionNumber": "22733",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15702"
+                    },
+                    {
+                        "oclcSymbol": "THS",
+                        "institutionNumber": "5718",
+                        "self": "https://worldcat.org/oclc-config/institution/data/64849"
+                    },
+                    {
+                        "oclcSymbol": "LAP",
+                        "institutionNumber": "138",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14285"
+                    },
+                    {
+                        "oclcSymbol": "WC4",
+                        "institutionNumber": "13108",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16402"
+                    },
+                    {
+                        "oclcSymbol": "EZG",
+                        "institutionNumber": "3419",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11835"
+                    },
+                    {
+                        "oclcSymbol": "PPL",
+                        "institutionNumber": "3658",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8564"
+                    },
+                    {
+                        "oclcSymbol": "EOW",
+                        "institutionNumber": "4868",
+                        "self": "https://worldcat.org/oclc-config/institution/data/46466"
+                    },
+                    {
+                        "oclcSymbol": "VCQ",
+                        "institutionNumber": "7352",
+                        "self": "https://worldcat.org/oclc-config/institution/data/66787"
+                    },
+                    {
+                        "oclcSymbol": "QS5",
+                        "institutionNumber": "17031",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15549"
+                    },
+                    {
+                        "oclcSymbol": "TRW",
+                        "institutionNumber": "1809",
+                        "self": "https://worldcat.org/oclc-config/institution/data/72909"
+                    },
+                    {
+                        "oclcSymbol": "CQU",
+                        "institutionNumber": "9776",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8718"
+                    },
+                    {
+                        "oclcSymbol": "OCPSB",
+                        "institutionNumber": "63416",
+                        "self": "https://worldcat.org/oclc-config/institution/data/128807"
+                    },
+                    {
+                        "oclcSymbol": "DPB",
+                        "institutionNumber": "385",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14929"
+                    },
+                    {
+                        "oclcSymbol": "T2G",
+                        "institutionNumber": "22184",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15766"
+                    },
+                    {
+                        "oclcSymbol": "IMF",
+                        "institutionNumber": "2575",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10412"
+                    },
+                    {
+                        "oclcSymbol": "OXA",
+                        "institutionNumber": "4997",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14574"
+                    },
+                    {
+                        "oclcSymbol": "KK2",
+                        "institutionNumber": "12942",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10969"
+                    },
+                    {
+                        "oclcSymbol": "WIK",
+                        "institutionNumber": "1803",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16548"
+                    },
+                    {
+                        "oclcSymbol": "FMP",
+                        "institutionNumber": "7120",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8981"
+                    },
+                    {
+                        "oclcSymbol": "EHI",
+                        "institutionNumber": "8454",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11770"
+                    },
+                    {
+                        "oclcSymbol": "UW8",
+                        "institutionNumber": "19303",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10027"
+                    },
+                    {
+                        "oclcSymbol": "PPR",
+                        "institutionNumber": "7364",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13240"
+                    },
+                    {
+                        "oclcSymbol": "SPA",
+                        "institutionNumber": "3321",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8603"
+                    },
+                    {
+                        "oclcSymbol": "IMD",
+                        "institutionNumber": "2110",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10541"
+                    },
+                    {
+                        "oclcSymbol": "N8V",
+                        "institutionNumber": "25300",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8409"
+                    },
+                    {
+                        "oclcSymbol": "QUE",
+                        "institutionNumber": "2471",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13349"
+                    },
+                    {
+                        "oclcSymbol": "YQR",
+                        "institutionNumber": "394",
+                        "self": "https://worldcat.org/oclc-config/institution/data/70886"
+                    },
+                    {
+                        "oclcSymbol": "ORK",
+                        "institutionNumber": "3437",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8550"
+                    },
+                    {
+                        "oclcSymbol": "XCA",
+                        "institutionNumber": "3558",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10528"
+                    },
+                    {
+                        "oclcSymbol": "ABJ",
+                        "institutionNumber": "2223",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8230"
+                    },
+                    {
+                        "oclcSymbol": "FSP",
+                        "institutionNumber": "4403",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9008"
+                    },
+                    {
+                        "oclcSymbol": "NTG",
+                        "institutionNumber": "6703",
+                        "self": "https://worldcat.org/oclc-config/institution/data/57853"
+                    },
+                    {
+                        "oclcSymbol": "IH9",
+                        "institutionNumber": "12242",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9865"
+                    },
+                    {
+                        "oclcSymbol": "JTV",
+                        "institutionNumber": "5510",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6575"
+                    },
+                    {
+                        "oclcSymbol": "ZQP",
+                        "institutionNumber": "3452",
+                        "self": "https://worldcat.org/oclc-config/institution/data/71949"
+                    },
+                    {
+                        "oclcSymbol": "FWP",
+                        "institutionNumber": "3573",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9022"
+                    },
+                    {
+                        "oclcSymbol": "ZRK",
+                        "institutionNumber": "28945",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9618"
+                    },
+                    {
+                        "oclcSymbol": "CHY",
+                        "institutionNumber": "7371",
+                        "self": "https://worldcat.org/oclc-config/institution/data/43384"
+                    },
+                    {
+                        "oclcSymbol": "GZD",
+                        "institutionNumber": "1028",
+                        "self": "https://worldcat.org/oclc-config/institution/data/105513"
+                    },
+                    {
+                        "oclcSymbol": "EYH",
+                        "institutionNumber": "1148",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11733"
+                    },
+                    {
+                        "oclcSymbol": "JBO",
+                        "institutionNumber": "3443",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10165"
+                    },
+                    {
+                        "oclcSymbol": "EXE",
+                        "institutionNumber": "844",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11889"
+                    },
+                    {
+                        "oclcSymbol": "MLN",
+                        "institutionNumber": "6956",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86798"
+                    },
+                    {
+                        "oclcSymbol": "LPU",
+                        "institutionNumber": "4417",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8529"
+                    },
+                    {
+                        "oclcSymbol": "RNL",
+                        "institutionNumber": "10500",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16145"
+                    },
+                    {
+                        "oclcSymbol": "IJ9",
+                        "institutionNumber": "12249",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9939"
+                    },
+                    {
+                        "oclcSymbol": "NORLN",
+                        "institutionNumber": "50806",
+                        "self": "https://worldcat.org/oclc-config/institution/data/102675"
+                    },
+                    {
+                        "oclcSymbol": "BTCTA",
+                        "institutionNumber": "45931",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85257"
+                    },
+                    {
+                        "oclcSymbol": "GLU",
+                        "institutionNumber": "7820",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8806"
+                    },
+                    {
+                        "oclcSymbol": "GRC",
+                        "institutionNumber": "173",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14415"
+                    },
+                    {
+                        "oclcSymbol": "DPL",
+                        "institutionNumber": "2370",
+                        "self": "https://worldcat.org/oclc-config/institution/data/45404"
+                    },
+                    {
+                        "oclcSymbol": "EGH",
+                        "institutionNumber": "3338",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11861"
+                    },
+                    {
+                        "oclcSymbol": "IHV",
+                        "institutionNumber": "2126",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9951"
+                    },
+                    {
+                        "oclcSymbol": "TXA",
+                        "institutionNumber": "613",
+                        "self": "https://worldcat.org/oclc-config/institution/data/2927"
+                    },
+                    {
+                        "oclcSymbol": "FVU",
+                        "institutionNumber": "10276",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6686"
+                    },
+                    {
+                        "oclcSymbol": "HT#",
+                        "institutionNumber": "30448",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15586"
+                    },
+                    {
+                        "oclcSymbol": "RC1",
+                        "institutionNumber": "18318",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16073"
+                    },
+                    {
+                        "oclcSymbol": "OCD",
+                        "institutionNumber": "15971",
+                        "self": "https://worldcat.org/oclc-config/institution/data/58478"
+                    },
+                    {
+                        "oclcSymbol": "JZM",
+                        "institutionNumber": "9457",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10014"
+                    },
+                    {
+                        "oclcSymbol": "ZPJ",
+                        "institutionNumber": "29218",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9667"
+                    },
+                    {
+                        "oclcSymbol": "DOC",
+                        "institutionNumber": "3231",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8503"
+                    },
+                    {
+                        "oclcSymbol": "KSA",
+                        "institutionNumber": "8240",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10700"
+                    },
+                    {
+                        "oclcSymbol": "MXB",
+                        "institutionNumber": "6062",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8248"
+                    },
+                    {
+                        "oclcSymbol": "XWE",
+                        "institutionNumber": "3106",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10452"
+                    },
+                    {
+                        "oclcSymbol": "BRL",
+                        "institutionNumber": "3907",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11113"
+                    },
+                    {
+                        "oclcSymbol": "VVW",
+                        "institutionNumber": "744",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6661"
+                    },
+                    {
+                        "oclcSymbol": "CWJ",
+                        "institutionNumber": "15978",
+                        "self": "https://worldcat.org/oclc-config/institution/data/44638"
+                    },
+                    {
+                        "oclcSymbol": "GZT",
+                        "institutionNumber": "629",
+                        "self": "https://worldcat.org/oclc-config/institution/data/3201"
+                    },
+                    {
+                        "oclcSymbol": "JRS",
+                        "institutionNumber": "5407",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8570"
+                    },
+                    {
+                        "oclcSymbol": "RJX",
+                        "institutionNumber": "20059",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8739"
+                    },
+                    {
+                        "oclcSymbol": "DV1",
+                        "institutionNumber": "15381",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10266"
+                    },
+                    {
+                        "oclcSymbol": "BDX",
+                        "institutionNumber": "6198",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86543"
+                    },
+                    {
+                        "oclcSymbol": "JUH",
+                        "institutionNumber": "15385",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9594"
+                    },
+                    {
+                        "oclcSymbol": "IKG",
+                        "institutionNumber": "2394",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9805"
+                    },
+                    {
+                        "oclcSymbol": "CIB",
+                        "institutionNumber": "10810",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86598"
+                    },
+                    {
+                        "oclcSymbol": "IL2",
+                        "institutionNumber": "11906",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9872"
+                    },
+                    {
+                        "oclcSymbol": "AKD",
+                        "institutionNumber": "633",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8333"
+                    },
+                    {
+                        "oclcSymbol": "JRY",
+                        "institutionNumber": "5413",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6574"
+                    },
+                    {
+                        "oclcSymbol": "EYP",
+                        "institutionNumber": "878",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11797"
+                    },
+                    {
+                        "oclcSymbol": "CGPIL",
+                        "institutionNumber": "36764",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8420"
+                    },
+                    {
+                        "oclcSymbol": "JRZ",
+                        "institutionNumber": "5414",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8590"
+                    },
+                    {
+                        "oclcSymbol": "IC9",
+                        "institutionNumber": "10375",
+                        "self": "https://worldcat.org/oclc-config/institution/data/50487"
+                    },
+                    {
+                        "oclcSymbol": "FO7",
+                        "institutionNumber": "15389",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8997"
+                    },
+                    {
+                        "oclcSymbol": "JTB",
+                        "institutionNumber": "5416",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8578"
+                    },
+                    {
+                        "oclcSymbol": "MIT",
+                        "institutionNumber": "5779",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15227"
+                    },
+                    {
+                        "oclcSymbol": "XMP",
+                        "institutionNumber": "2945",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10478"
+                    },
+                    {
+                        "oclcSymbol": "GYB",
+                        "institutionNumber": "8025",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8779"
+                    },
+                    {
+                        "oclcSymbol": "LIV",
+                        "institutionNumber": "5433",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8524"
+                    },
+                    {
+                        "oclcSymbol": "JAS",
+                        "institutionNumber": "3133",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9987"
+                    },
+                    {
+                        "oclcSymbol": "Y2A",
+                        "institutionNumber": "22365",
+                        "self": "https://worldcat.org/oclc-config/institution/data/75539"
+                    },
+                    {
+                        "oclcSymbol": "DE#",
+                        "institutionNumber": "20625",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15738"
+                    },
+                    {
+                        "oclcSymbol": "WSD",
+                        "institutionNumber": "2160",
+                        "self": "https://worldcat.org/oclc-config/institution/data/68778"
+                    },
+                    {
+                        "oclcSymbol": "OEI",
+                        "institutionNumber": "9592",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16407"
+                    },
+                    {
+                        "oclcSymbol": "LQM",
+                        "institutionNumber": "29551",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12437"
+                    },
+                    {
+                        "oclcSymbol": "EZH",
+                        "institutionNumber": "3926",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11823"
+                    },
+                    {
+                        "oclcSymbol": "RCP",
+                        "institutionNumber": "2036",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15276"
+                    },
+                    {
+                        "oclcSymbol": "AMP",
+                        "institutionNumber": "2399",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8297"
+                    },
+                    {
+                        "oclcSymbol": "VHB",
+                        "institutionNumber": "525",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13438"
+                    },
+                    {
+                        "oclcSymbol": "OCP",
+                        "institutionNumber": "888",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6570"
+                    },
+                    {
+                        "oclcSymbol": "SX2",
+                        "institutionNumber": "15950",
+                        "self": "https://worldcat.org/oclc-config/institution/data/64366"
+                    },
+                    {
+                        "oclcSymbol": "W6V",
+                        "institutionNumber": "25607",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16899"
+                    },
+                    {
+                        "oclcSymbol": "OEM",
+                        "institutionNumber": "9920",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16410"
+                    },
+                    {
+                        "oclcSymbol": "EB$",
+                        "institutionNumber": "21484",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8700"
+                    },
+                    {
+                        "oclcSymbol": "OPW",
+                        "institutionNumber": "2298",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6571"
+                    },
+                    {
+                        "oclcSymbol": "WW5",
+                        "institutionNumber": "18074",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13177"
+                    },
+                    {
+                        "oclcSymbol": "WSW",
+                        "institutionNumber": "2175",
+                        "self": "https://worldcat.org/oclc-config/institution/data/68812"
+                    },
+                    {
+                        "oclcSymbol": "WIQ",
+                        "institutionNumber": "2172",
+                        "self": "https://worldcat.org/oclc-config/institution/data/68380"
+                    },
+                    {
+                        "oclcSymbol": "BGP",
+                        "institutionNumber": "9242",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11001"
+                    },
+                    {
+                        "oclcSymbol": "W8A",
+                        "institutionNumber": "25604",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16888"
+                    },
+                    {
+                        "oclcSymbol": "WRS",
+                        "institutionNumber": "2722",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11346"
+                    },
+                    {
+                        "oclcSymbol": "IEB",
+                        "institutionNumber": "1753",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10389"
+                    },
+                    {
+                        "oclcSymbol": "INN",
+                        "institutionNumber": "1751",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10552"
+                    },
+                    {
+                        "oclcSymbol": "J@R",
+                        "institutionNumber": "29764",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9656"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "XPB",
+                        "institutionNumber": "8944",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10512"
+                    },
+                    {
+                        "oclcSymbol": "PAP",
+                        "institutionNumber": "5439",
+                        "self": "https://worldcat.org/oclc-config/institution/data/59441"
+                    },
+                    {
+                        "oclcSymbol": "W5F",
+                        "institutionNumber": "25618",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16894"
+                    },
+                    {
+                        "oclcSymbol": "MQZ",
+                        "institutionNumber": "8963",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12275"
+                    },
+                    {
+                        "oclcSymbol": "WSN",
+                        "institutionNumber": "1890",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16411"
+                    },
+                    {
+                        "oclcSymbol": "WYL",
+                        "institutionNumber": "3034",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16891"
+                    },
+                    {
+                        "oclcSymbol": "OCJ",
+                        "institutionNumber": "3395",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13299"
+                    },
+                    {
+                        "oclcSymbol": "BUP",
+                        "institutionNumber": "14280",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9298"
+                    },
+                    {
+                        "oclcSymbol": "ZAG",
+                        "institutionNumber": "8040",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12260"
+                    },
+                    {
+                        "oclcSymbol": "EYB",
+                        "institutionNumber": "1092",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8020"
+                    },
+                    {
+                        "oclcSymbol": "SJP",
+                        "institutionNumber": "780",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8580"
+                    },
+                    {
+                        "oclcSymbol": "MQT",
+                        "institutionNumber": "8957",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12263"
+                    },
+                    {
+                        "oclcSymbol": "LCOAD",
+                        "institutionNumber": "54668",
+                        "self": "https://worldcat.org/oclc-config/institution/data/105378"
+                    },
+                    {
+                        "oclcSymbol": "NUW",
+                        "institutionNumber": "9802",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13430"
+                    },
+                    {
+                        "oclcSymbol": "WIJ",
+                        "institutionNumber": "1769",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16542"
+                    },
+                    {
+                        "oclcSymbol": "CFL",
+                        "institutionNumber": "1889",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8605"
+                    },
+                    {
+                        "oclcSymbol": "JJG",
+                        "institutionNumber": "6312",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10142"
+                    },
+                    {
+                        "oclcSymbol": "CPP",
+                        "institutionNumber": "790",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8559"
+                    },
+                    {
+                        "oclcSymbol": "H7H",
+                        "institutionNumber": "24734",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8983"
+                    },
+                    {
+                        "oclcSymbol": "NI3",
+                        "institutionNumber": "12515",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12817"
+                    },
+                    {
+                        "oclcSymbol": "YVO",
+                        "institutionNumber": "311",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13889"
+                    },
+                    {
+                        "oclcSymbol": "UPM",
+                        "institutionNumber": "433",
+                        "self": "https://worldcat.org/oclc-config/institution/data/2571"
+                    },
+                    {
+                        "oclcSymbol": "M$I",
+                        "institutionNumber": "28651",
+                        "self": "https://worldcat.org/oclc-config/institution/data/54294"
+                    },
+                    {
+                        "oclcSymbol": "ZTM",
+                        "institutionNumber": "314",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6669"
+                    },
+                    {
+                        "oclcSymbol": "GK5",
+                        "institutionNumber": "16558",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9721"
+                    },
+                    {
+                        "oclcSymbol": "MR0",
+                        "institutionNumber": "18854",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10241"
+                    },
+                    {
+                        "oclcSymbol": "MUJ",
+                        "institutionNumber": "8969",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12377"
+                    },
+                    {
+                        "oclcSymbol": "GK8",
+                        "institutionNumber": "16561",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9848"
+                    },
+                    {
+                        "oclcSymbol": "KCK",
+                        "institutionNumber": "4382",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10702"
+                    },
+                    {
+                        "oclcSymbol": "WRP",
+                        "institutionNumber": "4384",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8619"
+                    },
+                    {
+                        "oclcSymbol": "NFG",
+                        "institutionNumber": "4388",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12601"
+                    },
+                    {
+                        "oclcSymbol": "M$Q",
+                        "institutionNumber": "29515",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85134"
+                    },
+                    {
+                        "oclcSymbol": "RIOSL",
+                        "institutionNumber": "57032",
+                        "self": "https://worldcat.org/oclc-config/institution/data/133907"
+                    },
+                    {
+                        "oclcSymbol": "BAY",
+                        "institutionNumber": "3176",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14628"
+                    },
+                    {
+                        "oclcSymbol": "T3B",
+                        "institutionNumber": "22202",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15824"
+                    },
+                    {
+                        "oclcSymbol": "MX@",
+                        "institutionNumber": "29519",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56113"
+                    },
+                    {
+                        "oclcSymbol": "CLE",
+                        "institutionNumber": "560",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14223"
+                    },
+                    {
+                        "oclcSymbol": "GRR",
+                        "institutionNumber": "3602",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12122"
+                    },
+                    {
+                        "oclcSymbol": "TDS",
+                        "institutionNumber": "1423",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6554"
+                    },
+                    {
+                        "oclcSymbol": "MDB",
+                        "institutionNumber": "1543",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11440"
+                    },
+                    {
+                        "oclcSymbol": "UUD",
+                        "institutionNumber": "1785",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16034"
+                    },
+                    {
+                        "oclcSymbol": "KYB",
+                        "institutionNumber": "12883",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10904"
+                    },
+                    {
+                        "oclcSymbol": "GL7",
+                        "institutionNumber": "16568",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10314"
+                    },
+                    {
+                        "oclcSymbol": "CPK",
+                        "institutionNumber": "10102",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12697"
+                    },
+                    {
+                        "oclcSymbol": "LMJ",
+                        "institutionNumber": "6571",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11070"
+                    },
+                    {
+                        "oclcSymbol": "GJV",
+                        "institutionNumber": "7780",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8776"
+                    },
+                    {
+                        "oclcSymbol": "OR4",
+                        "institutionNumber": "17063",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14545"
+                    },
+                    {
+                        "oclcSymbol": "BCF",
+                        "institutionNumber": "22774",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13414"
+                    },
+                    {
+                        "oclcSymbol": "RPL",
+                        "institutionNumber": "331",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14836"
+                    },
+                    {
+                        "oclcSymbol": "DF9",
+                        "institutionNumber": "12618",
+                        "self": "https://worldcat.org/oclc-config/institution/data/45124"
+                    },
+                    {
+                        "oclcSymbol": "ONT",
+                        "institutionNumber": "2520",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8549"
+                    },
+                    {
+                        "oclcSymbol": "TU5",
+                        "institutionNumber": "19008",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9772"
+                    },
+                    {
+                        "oclcSymbol": "JMZ",
+                        "institutionNumber": "3616",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14418"
+                    },
+                    {
+                        "oclcSymbol": "FWI",
+                        "institutionNumber": "19138",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10159"
+                    },
+                    {
+                        "oclcSymbol": "JQM",
+                        "institutionNumber": "5375",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8500"
+                    },
+                    {
+                        "oclcSymbol": "OQX",
+                        "institutionNumber": "6104",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14630"
+                    },
+                    {
+                        "oclcSymbol": "BRENT",
+                        "institutionNumber": "34198",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15319"
+                    },
+                    {
+                        "oclcSymbol": "GDM",
+                        "institutionNumber": "24961",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11841"
+                    },
+                    {
+                        "oclcSymbol": "MNL",
+                        "institutionNumber": "342",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14944"
+                    },
+                    {
+                        "oclcSymbol": "FMB",
+                        "institutionNumber": "3504",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8973"
+                    },
+                    {
+                        "oclcSymbol": "Y83",
+                        "institutionNumber": "29176",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12481"
+                    },
+                    {
+                        "oclcSymbol": "CGP",
+                        "institutionNumber": "223",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9812"
+                    },
+                    {
+                        "oclcSymbol": "DLC",
+                        "institutionNumber": "466",
+                        "self": "https://worldcat.org/oclc-config/institution/data/45266"
+                    },
+                    {
+                        "oclcSymbol": "CPL",
+                        "institutionNumber": "106",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14692"
+                    },
+                    {
+                        "oclcSymbol": "KNJ",
+                        "institutionNumber": "7682",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6528"
+                    },
+                    {
+                        "oclcSymbol": "LIQ",
+                        "institutionNumber": "16076",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6950"
+                    },
+                    {
+                        "oclcSymbol": "JQW",
+                        "institutionNumber": "5385",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8528"
+                    },
+                    {
+                        "oclcSymbol": "BDX",
+                        "institutionNumber": "6198",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86543"
+                    },
+                    {
+                        "oclcSymbol": "JTH",
+                        "institutionNumber": "5422",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8602"
+                    },
+                    {
+                        "oclcSymbol": "KCL",
+                        "institutionNumber": "2671",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14552"
+                    },
+                    {
+                        "oclcSymbol": "CAAIE",
+                        "institutionNumber": "58155",
+                        "self": "https://worldcat.org/oclc-config/institution/data/115542"
+                    },
+                    {
+                        "oclcSymbol": "D9M",
+                        "institutionNumber": "27925",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15676"
+                    },
+                    {
+                        "oclcSymbol": "DEERP",
+                        "institutionNumber": "33092",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15501"
+                    },
+                    {
+                        "oclcSymbol": "IAM",
+                        "institutionNumber": "1733",
+                        "self": "https://worldcat.org/oclc-config/institution/data/105441"
+                    },
+                    {
+                        "oclcSymbol": "OKE",
+                        "institutionNumber": "1336",
+                        "self": "https://worldcat.org/oclc-config/institution/data/82434"
+                    },
+                    {
+                        "oclcSymbol": "IHP",
+                        "institutionNumber": "1213",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10370"
+                    },
+                    {
+                        "oclcSymbol": "YCC",
+                        "institutionNumber": "1331",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8401"
+                    },
+                    {
+                        "oclcSymbol": "JRY",
+                        "institutionNumber": "5413",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6574"
+                    },
+                    {
+                        "oclcSymbol": "CGPIL",
+                        "institutionNumber": "36764",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8420"
+                    },
+                    {
+                        "oclcSymbol": "BVRDM",
+                        "institutionNumber": "35839",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16438"
+                    },
+                    {
+                        "oclcSymbol": "ZPT",
+                        "institutionNumber": "8408",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8458"
+                    },
+                    {
+                        "oclcSymbol": "KLP",
+                        "institutionNumber": "2549",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10948"
+                    },
+                    {
+                        "oclcSymbol": "ZDX",
+                        "institutionNumber": "19598",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9863"
+                    },
+                    {
+                        "oclcSymbol": "GYB",
+                        "institutionNumber": "8025",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8779"
+                    },
+                    {
+                        "oclcSymbol": "UOJ",
+                        "institutionNumber": "8660",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16414"
+                    },
+                    {
+                        "oclcSymbol": "LIV",
+                        "institutionNumber": "5433",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8524"
+                    },
+                    {
+                        "oclcSymbol": "ZHX",
+                        "institutionNumber": "9754",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9037"
+                    },
+                    {
+                        "oclcSymbol": "L8L",
+                        "institutionNumber": "29714",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12479"
+                    },
+                    {
+                        "oclcSymbol": "JAS",
+                        "institutionNumber": "3133",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9987"
+                    },
+                    {
+                        "oclcSymbol": "WSD",
+                        "institutionNumber": "2160",
+                        "self": "https://worldcat.org/oclc-config/institution/data/68778"
+                    },
+                    {
+                        "oclcSymbol": "MV$",
+                        "institutionNumber": "21833",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8992"
+                    },
+                    {
+                        "oclcSymbol": "OEI",
+                        "institutionNumber": "9592",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16407"
+                    },
+                    {
+                        "oclcSymbol": "DMM",
+                        "institutionNumber": "122",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14235"
+                    },
+                    {
+                        "oclcSymbol": "ISO",
+                        "institutionNumber": "1744",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10407"
+                    },
+                    {
+                        "oclcSymbol": "HSA",
+                        "institutionNumber": "2313",
+                        "self": "https://worldcat.org/oclc-config/institution/data/49956"
+                    },
+                    {
+                        "oclcSymbol": "IGA",
+                        "institutionNumber": "246",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15497"
+                    },
+                    {
+                        "oclcSymbol": "WIM",
+                        "institutionNumber": "1343",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6671"
+                    },
+                    {
+                        "oclcSymbol": "BPL",
+                        "institutionNumber": "1585",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12587"
+                    },
+                    {
+                        "oclcSymbol": "AMP",
+                        "institutionNumber": "2399",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8297"
+                    },
+                    {
+                        "oclcSymbol": "MCT",
+                        "institutionNumber": "8538",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8385"
+                    },
+                    {
+                        "oclcSymbol": "SX2",
+                        "institutionNumber": "15950",
+                        "self": "https://worldcat.org/oclc-config/institution/data/64366"
+                    },
+                    {
+                        "oclcSymbol": "JFN",
+                        "institutionNumber": "5702",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10075"
+                    },
+                    {
+                        "oclcSymbol": "DE@",
+                        "institutionNumber": "12600",
+                        "self": "https://worldcat.org/oclc-config/institution/data/45065"
+                    },
+                    {
+                        "oclcSymbol": "W6V",
+                        "institutionNumber": "25607",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16899"
+                    },
+                    {
+                        "oclcSymbol": "OEM",
+                        "institutionNumber": "9920",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16410"
+                    },
+                    {
+                        "oclcSymbol": "OPW",
+                        "institutionNumber": "2298",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6571"
+                    },
+                    {
+                        "oclcSymbol": "EZP",
+                        "institutionNumber": "1240",
+                        "self": "https://worldcat.org/oclc-config/institution/data/46852"
+                    },
+                    {
+                        "oclcSymbol": "SGR",
+                        "institutionNumber": "3142",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6631"
+                    },
+                    {
+                        "oclcSymbol": "AL5CW",
+                        "institutionNumber": "33591",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8203"
+                    },
+                    {
+                        "oclcSymbol": "WIQ",
+                        "institutionNumber": "2172",
+                        "self": "https://worldcat.org/oclc-config/institution/data/68380"
+                    },
+                    {
+                        "oclcSymbol": "BGP",
+                        "institutionNumber": "9242",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11001"
+                    },
+                    {
+                        "oclcSymbol": "TRJ",
+                        "institutionNumber": "2050",
+                        "self": "https://worldcat.org/oclc-config/institution/data/72901"
+                    },
+                    {
+                        "oclcSymbol": "MZC",
+                        "institutionNumber": "8271",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12478"
+                    },
+                    {
+                        "oclcSymbol": "CKE",
+                        "institutionNumber": "10515",
+                        "self": "https://worldcat.org/oclc-config/institution/data/73215"
+                    },
+                    {
+                        "oclcSymbol": "ZNM",
+                        "institutionNumber": "410",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6667"
+                    },
+                    {
+                        "oclcSymbol": "IOU",
+                        "institutionNumber": "1597",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9115"
+                    },
+                    {
+                        "oclcSymbol": "MZ$",
+                        "institutionNumber": "29521",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56236"
+                    },
+                    {
+                        "oclcSymbol": "G2T",
+                        "institutionNumber": "24990",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11836"
+                    },
+                    {
+                        "oclcSymbol": "MY$",
+                        "institutionNumber": "29520",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56196"
+                    },
+                    {
+                        "oclcSymbol": "UJA",
+                        "institutionNumber": "10352",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12442"
+                    },
+                    {
+                        "oclcSymbol": "XDR",
+                        "institutionNumber": "7459",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6947"
+                    },
+                    {
+                        "oclcSymbol": "LMX",
+                        "institutionNumber": "15885",
+                        "self": "https://worldcat.org/oclc-config/institution/data/53877"
+                    },
+                    {
+                        "oclcSymbol": "YDX",
+                        "institutionNumber": "5557",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6375"
+                    },
+                    {
+                        "oclcSymbol": "XPB",
+                        "institutionNumber": "8944",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10512"
+                    },
+                    {
+                        "oclcSymbol": "WC4",
+                        "institutionNumber": "13108",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16402"
+                    },
+                    {
+                        "oclcSymbol": "PAP",
+                        "institutionNumber": "5439",
+                        "self": "https://worldcat.org/oclc-config/institution/data/59441"
+                    },
+                    {
+                        "oclcSymbol": "EZG",
+                        "institutionNumber": "3419",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11835"
+                    },
+                    {
+                        "oclcSymbol": "VCQ",
+                        "institutionNumber": "7352",
+                        "self": "https://worldcat.org/oclc-config/institution/data/66787"
+                    },
+                    {
+                        "oclcSymbol": "TRW",
+                        "institutionNumber": "1809",
+                        "self": "https://worldcat.org/oclc-config/institution/data/72909"
+                    },
+                    {
+                        "oclcSymbol": "OWL",
+                        "institutionNumber": "1371",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14405"
+                    },
+                    {
+                        "oclcSymbol": "BUP",
+                        "institutionNumber": "14280",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9298"
+                    },
+                    {
+                        "oclcSymbol": "EYB",
+                        "institutionNumber": "1092",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8020"
+                    },
+                    {
+                        "oclcSymbol": "SJP",
+                        "institutionNumber": "780",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8580"
+                    },
+                    {
+                        "oclcSymbol": "ALBRS",
+                        "institutionNumber": "35922",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85582"
+                    },
+                    {
+                        "oclcSymbol": "DPB",
+                        "institutionNumber": "385",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14929"
+                    },
+                    {
+                        "oclcSymbol": "QMC",
+                        "institutionNumber": "2733",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85620"
+                    },
+                    {
+                        "oclcSymbol": "XTW",
+                        "institutionNumber": "29098",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16400"
+                    },
+                    {
+                        "oclcSymbol": "WPL",
+                        "institutionNumber": "664",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6572"
+                    },
+                    {
+                        "oclcSymbol": "T2G",
+                        "institutionNumber": "22184",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15766"
+                    },
+                    {
+                        "oclcSymbol": "IMF",
+                        "institutionNumber": "2575",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10412"
+                    },
+                    {
+                        "oclcSymbol": "HZW",
+                        "institutionNumber": "6777",
+                        "self": "https://worldcat.org/oclc-config/institution/data/73540"
+                    },
+                    {
+                        "oclcSymbol": "FLM",
+                        "institutionNumber": "7107",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6598"
+                    },
+                    {
+                        "oclcSymbol": "SRC",
+                        "institutionNumber": "789",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15180"
+                    },
+                    {
+                        "oclcSymbol": "DEF",
+                        "institutionNumber": "41",
+                        "self": "https://worldcat.org/oclc-config/institution/data/2251"
+                    },
+                    {
+                        "oclcSymbol": "IWR",
+                        "institutionNumber": "1648",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9443"
+                    },
+                    {
+                        "oclcSymbol": "WIJ",
+                        "institutionNumber": "1769",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16542"
+                    },
+                    {
+                        "oclcSymbol": "EHJ",
+                        "institutionNumber": "8455",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11968"
+                    },
+                    {
+                        "oclcSymbol": "QBL",
+                        "institutionNumber": "9665",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13271"
+                    },
+                    {
+                        "oclcSymbol": "JJG",
+                        "institutionNumber": "6312",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10142"
+                    },
+                    {
+                        "oclcSymbol": "SPA",
+                        "institutionNumber": "3321",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8603"
+                    },
+                    {
+                        "oclcSymbol": "IMD",
+                        "institutionNumber": "2110",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10541"
+                    },
+                    {
+                        "oclcSymbol": "N8V",
+                        "institutionNumber": "25300",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8409"
+                    },
+                    {
+                        "oclcSymbol": "M@L",
+                        "institutionNumber": "29504",
+                        "self": "https://worldcat.org/oclc-config/institution/data/54528"
+                    },
+                    {
+                        "oclcSymbol": "JBL",
+                        "institutionNumber": "3441",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9732"
+                    },
+                    {
+                        "oclcSymbol": "M@G",
+                        "institutionNumber": "29503",
+                        "self": "https://worldcat.org/oclc-config/institution/data/54523"
+                    },
+                    {
+                        "oclcSymbol": "QUE",
+                        "institutionNumber": "2471",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13349"
+                    },
+                    {
+                        "oclcSymbol": "I4F",
+                        "institutionNumber": "22555",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9655"
+                    },
+                    {
+                        "oclcSymbol": "V91",
+                        "institutionNumber": "23765",
+                        "self": "https://worldcat.org/oclc-config/institution/data/66664"
+                    },
+                    {
+                        "oclcSymbol": "YQR",
+                        "institutionNumber": "394",
+                        "self": "https://worldcat.org/oclc-config/institution/data/70886"
+                    },
+                    {
+                        "oclcSymbol": "CPP",
+                        "institutionNumber": "790",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8559"
+                    },
+                    {
+                        "oclcSymbol": "ZAB",
+                        "institutionNumber": "6150",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12257"
+                    },
+                    {
+                        "oclcSymbol": "ORK",
+                        "institutionNumber": "3437",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8550"
+                    },
+                    {
+                        "oclcSymbol": "YVO",
+                        "institutionNumber": "311",
+                        "self": "https://worldcat.org/oclc-config/institution/data/13889"
+                    },
+                    {
+                        "oclcSymbol": "UPM",
+                        "institutionNumber": "433",
+                        "self": "https://worldcat.org/oclc-config/institution/data/2571"
+                    },
+                    {
+                        "oclcSymbol": "ABJ",
+                        "institutionNumber": "2223",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8230"
+                    },
+                    {
+                        "oclcSymbol": "M$I",
+                        "institutionNumber": "28651",
+                        "self": "https://worldcat.org/oclc-config/institution/data/54294"
+                    },
+                    {
+                        "oclcSymbol": "JVB",
+                        "institutionNumber": "318",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14877"
+                    },
+                    {
+                        "oclcSymbol": "FSP",
+                        "institutionNumber": "4403",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9008"
+                    },
+                    {
+                        "oclcSymbol": "GK7",
+                        "institutionNumber": "16560",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9835"
+                    },
+                    {
+                        "oclcSymbol": "KCK",
+                        "institutionNumber": "4382",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10702"
+                    },
+                    {
+                        "oclcSymbol": "ZQP",
+                        "institutionNumber": "3452",
+                        "self": "https://worldcat.org/oclc-config/institution/data/71949"
+                    },
+                    {
+                        "oclcSymbol": "FWP",
+                        "institutionNumber": "3573",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9022"
+                    },
+                    {
+                        "oclcSymbol": "RIOSL",
+                        "institutionNumber": "57032",
+                        "self": "https://worldcat.org/oclc-config/institution/data/133907"
+                    },
+                    {
+                        "oclcSymbol": "ZRK",
+                        "institutionNumber": "28945",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9618"
+                    },
+                    {
+                        "oclcSymbol": "MU@",
+                        "institutionNumber": "29517",
+                        "self": "https://worldcat.org/oclc-config/institution/data/55999"
+                    },
+                    {
+                        "oclcSymbol": "CLE",
+                        "institutionNumber": "560",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14223"
+                    },
+                    {
+                        "oclcSymbol": "WIA",
+                        "institutionNumber": "1305",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16574"
+                    },
+                    {
+                        "oclcSymbol": "GRN",
+                        "institutionNumber": "1789",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8817"
+                    },
+                    {
+                        "oclcSymbol": "GZD",
+                        "institutionNumber": "1028",
+                        "self": "https://worldcat.org/oclc-config/institution/data/105513"
+                    },
+                    {
+                        "oclcSymbol": "GRR",
+                        "institutionNumber": "3602",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12122"
+                    },
+                    {
+                        "oclcSymbol": "EYH",
+                        "institutionNumber": "1148",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11733"
+                    },
+                    {
+                        "oclcSymbol": "TDS",
+                        "institutionNumber": "1423",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6554"
+                    },
+                    {
+                        "oclcSymbol": "MDB",
+                        "institutionNumber": "1543",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11440"
+                    },
+                    {
+                        "oclcSymbol": "MZ@",
+                        "institutionNumber": "29510",
+                        "self": "https://worldcat.org/oclc-config/institution/data/56239"
+                    },
+                    {
+                        "oclcSymbol": "EXE",
+                        "institutionNumber": "844",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11889"
+                    },
+                    {
+                        "oclcSymbol": "GL7",
+                        "institutionNumber": "16568",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10314"
+                    },
+                    {
+                        "oclcSymbol": "CGE",
+                        "institutionNumber": "4413",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8506"
+                    },
+                    {
+                        "oclcSymbol": "OEL",
+                        "institutionNumber": "1827",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14533"
+                    },
+                    {
+                        "oclcSymbol": "KYC",
+                        "institutionNumber": "12888",
+                        "self": "https://worldcat.org/oclc-config/institution/data/6809"
+                    },
+                    {
+                        "oclcSymbol": "MLN",
+                        "institutionNumber": "6956",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86798"
+                    },
+                    {
+                        "oclcSymbol": "UND",
+                        "institutionNumber": "1307",
+                        "self": "https://worldcat.org/oclc-config/institution/data/2202"
+                    },
+                    {
+                        "oclcSymbol": "NGF",
+                        "institutionNumber": "4659",
+                        "self": "https://worldcat.org/oclc-config/institution/data/12607"
+                    },
+                    {
+                        "oclcSymbol": "LMJ",
+                        "institutionNumber": "6571",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11070"
+                    },
+                    {
+                        "oclcSymbol": "LI#",
+                        "institutionNumber": "19766",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9157"
+                    },
+                    {
+                        "oclcSymbol": "BTCTA",
+                        "institutionNumber": "45931",
+                        "self": "https://worldcat.org/oclc-config/institution/data/85257"
+                    },
+                    {
+                        "oclcSymbol": "MC2",
+                        "institutionNumber": "11480",
+                        "self": "https://worldcat.org/oclc-config/institution/data/54787"
+                    },
+                    {
+                        "oclcSymbol": "GLU",
+                        "institutionNumber": "7820",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8806"
+                    },
+                    {
+                        "oclcSymbol": "RPL",
+                        "institutionNumber": "331",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14836"
+                    },
+                    {
+                        "oclcSymbol": "IHV",
+                        "institutionNumber": "2126",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9951"
+                    },
+                    {
+                        "oclcSymbol": "UTW",
+                        "institutionNumber": "4709",
+                        "self": "https://worldcat.org/oclc-config/institution/data/16076"
+                    },
+                    {
+                        "oclcSymbol": "IEP",
+                        "institutionNumber": "732",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10361"
+                    },
+                    {
+                        "oclcSymbol": "TXA",
+                        "institutionNumber": "613",
+                        "self": "https://worldcat.org/oclc-config/institution/data/2927"
+                    },
+                    {
+                        "oclcSymbol": "GJT",
+                        "institutionNumber": "7778",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8773"
+                    },
+                    {
+                        "oclcSymbol": "TU5",
+                        "institutionNumber": "19008",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9772"
+                    },
+                    {
+                        "oclcSymbol": "TXG",
+                        "institutionNumber": "618",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15595"
+                    },
+                    {
+                        "oclcSymbol": "HT#",
+                        "institutionNumber": "30448",
+                        "self": "https://worldcat.org/oclc-config/institution/data/15586"
+                    },
+                    {
+                        "oclcSymbol": "DILBD",
+                        "institutionNumber": "72308",
+                        "self": "https://worldcat.org/oclc-config/institution/data/215433"
+                    },
+                    {
+                        "oclcSymbol": "IHE",
+                        "institutionNumber": "1955",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9882"
+                    },
+                    {
+                        "oclcSymbol": "JQM",
+                        "institutionNumber": "5375",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8500"
+                    },
+                    {
+                        "oclcSymbol": "OQX",
+                        "institutionNumber": "6104",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14630"
+                    },
+                    {
+                        "oclcSymbol": "JZM",
+                        "institutionNumber": "9457",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10014"
+                    },
+                    {
+                        "oclcSymbol": "ZPJ",
+                        "institutionNumber": "29218",
+                        "self": "https://worldcat.org/oclc-config/institution/data/9667"
+                    },
+                    {
+                        "oclcSymbol": "OMI",
+                        "institutionNumber": "2142",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14314"
+                    },
+                    {
+                        "oclcSymbol": "DOC",
+                        "institutionNumber": "3231",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8503"
+                    },
+                    {
+                        "oclcSymbol": "GDM",
+                        "institutionNumber": "24961",
+                        "self": "https://worldcat.org/oclc-config/institution/data/11841"
+                    },
+                    {
+                        "oclcSymbol": "KSA",
+                        "institutionNumber": "8240",
+                        "self": "https://worldcat.org/oclc-config/institution/data/10700"
+                    },
+                    {
+                        "oclcSymbol": "QBX",
+                        "institutionNumber": "7393",
+                        "self": "https://worldcat.org/oclc-config/institution/data/86699"
+                    },
+                    {
+                        "oclcSymbol": "FMB",
+                        "institutionNumber": "3504",
+                        "self": "https://worldcat.org/oclc-config/institution/data/8973"
+                    },
+                    {
+                        "oclcSymbol": "GZK",
+                        "institutionNumber": "982",
+                        "self": "https://worldcat.org/oclc-config/institution/data/48999"
+                    },
+                    {
+                        "oclcSymbol": "CPL",
+                        "institutionNumber": "106",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14692"
+                    },
+                    {
+                        "oclcSymbol": "ABY",
+                        "institutionNumber": "4711",
+                        "self": "https://worldcat.org/oclc-config/institution/data/14620"
+                    },
+                    {
+                        "oclcSymbol": "HIC",
+                        "institutionNumber": "5768",
+                        "self": "https://worldcat.org/oclc-config/institution/data/49587"
+                    }
+                ]
+            }
+        }
+    ]
+}

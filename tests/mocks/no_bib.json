@@ -1,0 +1,5 @@
+{
+    "type": "NOT_FOUND",
+    "title": "Resource Not Found",
+    "detail": "The specified resource (99999999999) was not found at this address."
+}
