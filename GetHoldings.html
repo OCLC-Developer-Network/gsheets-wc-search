@@ -1,16 +1,15 @@
-
       <div class="sidebar">
-         <form name="holdingCheck" id="holdingCheck">
+         <form name="holdingsGet" id="holdingsGet">
            <div class="block form-group">
-              <span style="color:white"><b>Check Holdings By</b></span>
+              <span style="color:white"><b>Filter Holdings By</b></span>
               <br>            
-              <select id="filterType" name="filterType">              
-              <!-- 
+              <select id="filterType" name="filterType">
               <option value="heldInCountry">Country</option>
+              <!-- 
               <option value="heldInState">State</option>
-              -->
               <option value="heldByGroup">Group</option>
               <option value="heldBy">Institution</option>
+               -->
               </select>
               <br>
               <span style="color:white"><b>Value</b></span>
@@ -22,7 +21,7 @@
            <br>
            
          <div class="block form-group">
-              <input type="button" class="action" value="Check Holding status" onclick="submitForm()" />
+              <input type="button" class="action" value="Get Holdings" onclick="submitForm()" />
          </div>
          <br>         
          
@@ -32,7 +31,7 @@
      
          <script>
         function submitForm(){
-            google.script.run.fillHoldingStatus(document.getElementById('holdingCheck'));
+            google.script.run.fillHoldings(document.getElementById('holdingsGet'));
             google.script.host.close() 
           }        
        

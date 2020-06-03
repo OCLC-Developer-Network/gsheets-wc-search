@@ -2,9 +2,18 @@
       <div class="sidebar">
          <form name="holdingsCheck" id="holdingsCheck">
            <div class="block form-group">
-              <span style="color:white"><b>Filter Holdings By Country</b></span>
+              <span style="color:white"><b>Filter Holdings By</b></span>
+              <br>            
+              <select id="filterType" name="filterType">
+              <option value="heldInCountry">Country</option>
+              <!-- 
+              <option value="heldInState">State</option>
+              <option value="heldByGroup">Group</option>
+              <option value="heldBy">Institution</option>
+               -->
+              </select>
               <br>
-              <span style="color:white"><b>Country Code</b></span>
+              <span style="color:white"><b>Value</b></span>
               <br>
               <input type="text" id="filterValue" name="filterValue" placeholder="Value to filter by" value=""/>
               <br>               

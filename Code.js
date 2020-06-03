@@ -1,5 +1,3 @@
-const worldcatSearchBaseURL = 'https://americas.discovery.api.oclc.org/worldcat/v2'
-
 function onOpen() {
   SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
       .createMenu('Custom Menu')
@@ -11,9 +9,13 @@ function onOpen() {
       .addSeparator()
       .addItem('Get basic Metadata', 'fillMetadata')
       .addSeparator()
-      .addItem('Check Holding Status', 'showCheckHoldingsDialog')
-      .addSeparator()
+      .addItem('Check My Holding Status', 'fillMyHoldingStatus')
+      .addSeparator()      
+//      .addItem('Check Holding Status', 'showCheckHoldingsDialog')
+//      .addSeparator()
       .addItem('Get Holdings Count', 'showGetHoldingsCountDialog')      
+      .addSeparator()
+      .addItem('Get Holdings', 'showGetHoldingsDialog')      
       .addSeparator()      
       .addItem('Check Retentions', 'showCheckRetentionsDialog')
       .addSeparator()
@@ -23,15 +25,6 @@ function onOpen() {
 
 function onInstall() {
   onOpen();
-}
-
-
-function showSidebar() {
-  var html = HtmlService.createHtmlOutputFromFile('sidebar')
-      .setTitle('OCLC Lookup:')
-      .setWidth(500);
-  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
-      .showSidebar(html);    
 }
 
 function showDialog() {
@@ -52,6 +45,14 @@ function showCheckHoldingsDialog() {
 
 function showGetHoldingsCountDialog() {
 	  var html = HtmlService.createHtmlOutputFromFile('GetHoldingsCount')
+	      .setWidth(400)
+	      .setHeight(300);
+	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
+	      .showModalDialog(html, 'Enter Filter Criteria');
+	}
+
+function showGetHoldingsDialog() {
+	  var html = HtmlService.createHtmlOutputFromFile('GetHoldings')
 	      .setWidth(400)
 	      .setHeight(300);
 	  SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
@@ -81,21 +82,23 @@ function saveCredentials(form) {
    //MAKE SURE THE OCLC API KEY AND SECRET HAVE BEEN ENTERED
    let apiKey = form.apiKey;
    let secret = form.apiSecret;
-   if (apiKey == null || apiKey == "" || secret == null || secret == "") {
-     ui.alert("OCLC API Key and Secret are Required");
+   let institutionSymbol = form.institutionSymbol;
+   if (apiKey == null || apiKey == "" || secret == null || secret == "" || institutionSymbol == null || institutionSymbol == "") {
+     ui.alert("OCLC API Key, Secret and Institution Symbol are Required");
      return;
    }
    PropertiesService.getUserProperties().setProperty('apiKey', apiKey);
-   PropertiesService.getUserProperties().setProperty('secret', secret);
+   PropertiesService.getUserProperties().setProperty('secret', secret);   
+   PropertiesService.getUserProperties().setProperty('institutionSymbol', institutionSymbol);
  }
 
-function getStoredAPIKey() {
-    return PropertiesService.getUserProperties().getProperty('apiKey')
- }
-
-function getStoredAPISecret() {
-    return PropertiesService.getUserProperties().getProperty('secret')
- }
+function getConfig() {
+    let config = new Object();
+	config.apiKey = PropertiesService.getUserProperties().getProperty('apiKey')
+    config.apiSecret = PropertiesService.getUserProperties().getProperty('secret')
+    config.institutionSymbol = PropertiesService.getUserProperties().getProperty('institutionSymbol')
+    return config;
+}
 
 /**
  * Reset the authorization state, so that it can be re-tested.
@@ -108,7 +111,7 @@ function reset() {
  * Configures the service.
  */
 function getService() {
-  return OAuth2.createService('WorldCat API')
+  return OAuth2.createService('WorldCat Search API')
       // Set the endpoint URLs.
       .setTokenUrl('https://oauth.oclc.org/token')
 
@@ -118,7 +121,7 @@ function getService() {
 
       // Sets the custom grant type to use.
       .setGrantType('client_credentials')
-      .setScope('DISCOVERY')
+      .setScope('wcapi')
   
       // Set the property store where authorized tokens should be persisted.
       .setPropertyStore(PropertiesService.getUserProperties());
@@ -135,6 +138,18 @@ function fillCurrentOCLCNumber(){
 	  }
 	  
 	  dataRange.setValues(bookValues); 
+}
+
+function fillMyHoldingStatus(){		
+	var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+		.getDataRange();
+	var bookValues = dataRange.getValues();
+	for(var row = 1; row < bookValues.length; row++){
+		  let status = getHoldingStatus(bookValues[row][0], 'heldBy', PropertiesService.getUserProperties().getProperty('institutionSymbol'))		 
+		  bookValues[row][2] = status
+	}
+	  
+	dataRange.setValues(bookValues);
 }
 
 function fillHoldingStatus(form){
@@ -176,7 +191,7 @@ function fillMetadata(){
 	  // Examine each row of the data (excluding the header row).
 	  // If an ISBN is present and a title or author is missing,
 	  // use the fetchBookData_(isbn) method to retrieve the
-	  // missing data from the Open Library API. Fill in the
+	  // missing data from the Open appLibrary API. Fill in the
 	  // missing titles or authors when they are found.
 	  for(var row = 1; row < bookValues.length; row++){   	   
 
@@ -248,6 +263,23 @@ function fillHoldingCount(form){
 	  dataRange.setValues(bookValues);	
 }
 
+function fillHoldings(form){
+	let filterValue = form.filterValue;
+	if (filterValue == null || filterValue == "") {
+		ui.alert("Filter parameters are required!");
+     return;
+	}	
+	  var dataRange = SpreadsheetApp.getActiveSpreadsheet()
+	    .getDataRange();
+	  var bookValues = dataRange.getValues();
+	  for(var row = 1; row < bookValues.length; row++){  
+		  var holdings = getHoldings(bookValues[row][0], filterValue);
+		  bookValues[row][8] = holdings;
+	  }
+	  
+	  dataRange.setValues(bookValues);	
+}
+
 function fillRetentionCheck(form){
 	var ui = SpreadsheetApp.getUi();	
 	let filterType = form.filterType;
@@ -261,7 +293,7 @@ function fillRetentionCheck(form){
 	var bookValues = dataRange.getValues();
 	for(var row = 1; row < bookValues.length; row++){  
 		var retentionCheck = checkRetentions(bookValues[row][0], filterType, filterValue);
-		bookValues[row][8] = retentionCheck;
+		bookValues[row][9] = retentionCheck;
 	}
 	  
 	dataRange.setValues(bookValues);
@@ -280,7 +312,7 @@ function fillRetentionInfo(form){
 	var bookValues = dataRange.getValues();
 	for(var row = 1; row < bookValues.length; row++){  
 		var retentionInfo = getRetentions(bookValues[row][0], filterType, filterValue);
-		bookValues[row][9] = retentionInfo;
+		bookValues[row][10] = retentionInfo;
 	}
 	dataRange.setValues(bookValues);	
 }
@@ -288,14 +320,14 @@ function fillRetentionInfo(form){
 function getMetadata(oclcNumber){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = worldcatSearchBaseURL + '/bibs/' + oclcNumber;
+	    var url = appLibrary.createRequestURL('getMetadata', oclcNumber)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bib = Metadata.getBasicMetadata(response.getContentText());	    
+	    let bib = appLibrary.getBasicMetadata(response.getContentText());	    
 		return bib	    	    
 	  } else {
 	    Logger.log(service.getLastError());
@@ -305,20 +337,14 @@ function getMetadata(oclcNumber){
 function getHoldingStatus(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = worldcatSearchBaseURL + '/bibs?q=no:' + oclcNumber + '&' + filterType + '=' + filterValue;
+		var url = appLibrary.createRequestURL('getHoldingStatus', oclcNumber, filterType, filterValue)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
-	    });
-	    let bib_results = JSON.parse(response.getContentText());	 
-	    let holdingStatus = ""
-	    if (bib_results.numberOfRecords > 0) {
-	    	holdingStatus = "TRUE"
-	    } else {
-	    	holdingStatus = "FALSE"
-	    }
+	    });	 
+	    let holdingStatus = appLibrary.getHoldingStatus(response.getContentText())
 		return holdingStatus
 	  } else {
 	    Logger.log(service.getLastError());
@@ -328,16 +354,32 @@ function getHoldingStatus(oclcNumber, filterType, filterValue){
 function getHoldingsCount(oclcNumber, country){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = worldcatSearchBaseURL + '/bibs-holdings?oclcNumber=' + oclcNumber + '&heldInCountry=' + country;
+		var url = appLibrary.createRequestURL('getHoldingsCount', oclcNumber, 'heldInCountry', country)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bib_holding_results = JSON.parse(response.getContentText());	    
-		let holdingsCount = bib_holding_results.briefRecords[0].institutionHolding.totalHoldingCount
-		return holdingsCount
+	    let holdingsData = appLibrary.getHoldingsData(response.getContentText());	    
+		return holdingsData.totalHoldingCount
+	  } else {
+	    Logger.log(service.getLastError());
+	  }
+}
+
+function getHoldings(oclcNumber, country){
+	  var service = getService();
+	  if (service.hasAccess()) {
+		var url = appLibrary.createRequestURL('getHoldings', oclcNumber, 'heldInCountry', country)
+	    var response = UrlFetchApp.fetch(url, {
+	      headers: {
+	        Authorization: 'Bearer ' + service.getAccessToken()        
+	      },
+	      validateHttpsCertificates: false
+	    });
+	    let holdingsData = appLibrary.getHoldingsData(response.getContentText());	    
+		return holdingsData.libraries.join()
 	  } else {
 	    Logger.log(service.getLastError());
 	  }
@@ -346,16 +388,15 @@ function getHoldingsCount(oclcNumber, country){
 function checkRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = worldcatSearchBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+		var url = appLibrary.createRequestURL('checkRetentions', oclcNumber, filterType, filterValue)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bibRetainedHoldings = JSON.parse(response.getContentText());	    
-		let numberOfRecords = bibRetainedHoldings.numberOfRecords
-		if (numberOfRecords == 0){
+		let bibRetainedHoldings = appLibrary.getRetentionsData(response.getContentText());
+		if (bibRetainedHoldings.numberOfRecords == 0){
 			return "FALSE"
 		} else {
 			return "TRUE"
@@ -368,21 +409,15 @@ function checkRetentions(oclcNumber, filterType, filterValue){
 function getRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = worldcatSearchBaseURL + '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
+		var url = appLibrary.createRequestURL('getRetentions', oclcNumber, filterType, filterValue)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bibRetainedHoldings = JSON.parse(response.getContentText());	    
-        if (bibRetainedHoldings.numberOfRecords == 0){
-            return "None"
-        } else {  
-			let retentionSet = bibRetainedHoldings.briefRecords[0].institutionHolding.briefHoldings
-			let oclcSymbolsRetentions = retentionSet.map(retention => retention.oclcSymbol)
-			return oclcSymbolsRetentions.join();
-        }
+	    let bibRetainedHoldings = appLibrary.getRetentionsData(response.getContentText());
+	    return bibRetainedHoldings.oclcSymbolsRetentions.join()
 	  } else {
 	    Logger.log(service.getLastError());
 	  }

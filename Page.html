@@ -9,6 +9,10 @@
               <span style="color:white"><b>OCLC API secret</b></span>
               <br>
               <input type="text" id="apiSecret" name="apiSecret" placeholder="api secret (required)" value=""/>
+              <br> 
+              <span style="color:white"><b>Institution OCLC Symbol</b></span>
+              <br>
+              <input type="text" id="institutionSymbol" name="institutionSymbol" placeholder="OCLC symbol (required)" value=""/>
               <br>               
            </div>
            
@@ -26,22 +30,20 @@
          <script>
     
         // The code in this function runs when the page is loaded.
-        // getTabs is a server side function in Code.gs
         $(function() {         
-           google.script.run.withSuccessHandler(setKey).getStoredAPIKey();
-           google.script.run.withSuccessHandler(setSecret).getStoredAPISecret();
+           google.script.run.withSuccessHandler(fillConfig).getConfig();
         });
         
-        function setKey(apiKey){
-            if (apiKey == null  || apiKey === undefined) apiKey = "";
-            document.getElementById('apiKey').value=apiKey;
-       
-          }
-        function setSecret(apiSecret){
-            if (apiSecret == null  || apiSecret === undefined) apiSecret = "";
-            document.getElementById('apiSecret').value=apiSecret;
-       
-          }
+        function fillConfig(config){
+            if (config.apiKey == null  || config.apiKey === undefined) config.apiKey = "";
+            document.getElementById('apiKey').value = config.apiKey;
+            
+            if (config.apiSecret == null  || config.apiSecret === undefined) config.apiSecret = "";
+            document.getElementById('apiSecret').value = config.apiSecret;
+            
+            if (config.institutionSymbol == null  || config.institutionSymbol === undefined) config.institutionSymbol = "";
+            document.getElementById('institutionSymbol').value = config.institutionSymbol;
+          }        
         function submitCredentials(){
             google.script.run.saveCredentials(document.getElementById('customerCredentials'));
             google.script.host.close() 
