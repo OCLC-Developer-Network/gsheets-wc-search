@@ -64,12 +64,12 @@ function getHoldingStatus(result){
 function getHoldingsData(result) {
 	let bibHoldings = JSON.parse(result);
 	
+	let oclcSymbolHoldings = [];
     if (bibHoldings.numberOfRecords == 0 || bibHoldings.briefRecords[0].institutionHolding.briefHoldings == undefined){
     	oclcSymbolHoldings = []
     } else {  
 		let holdingSet = bibHoldings.briefRecords[0].institutionHolding.briefHoldings
-		console.log(holdingSet)
-		let oclcSymbolHoldings = holdingSet.map(holding => holding.oclcSymbol)		
+		oclcSymbolHoldings = holdingSet.map(holding => holding.oclcSymbol)		
     }
 	
 	let holdingData = new Object(); 
@@ -87,7 +87,7 @@ function getRetentionsData(result) {
 	
     if (bibRetainedHoldings.numberOfRecords == 0 || bibRetainedHoldings.briefRecords[0].institutionHolding.briefHoldings == undefined){
     	numberOfRetentions = 0
-    	oclcSymbolsRetentions = []
+    	oclcSymbolRetentions = []
     } else {  
 		let retentionSet = bibRetainedHoldings.briefRecords[0].institutionHolding.briefHoldings
 		oclcSymbolRetentions = retentionSet.map(retention => retention.oclcSymbol)
@@ -96,7 +96,7 @@ function getRetentionsData(result) {
 	
 	let retentionData = new Object();
 	retentionData.numberOfRetentions = numberOfRetentions
-	retentionData.oclcSymbolsRetentions = oclcSymbolRetentions		    		
+	retentionData.oclcSymbolRetentions = oclcSymbolRetentions		    		
 
-    return retentionData
+    return retentionData;
 }

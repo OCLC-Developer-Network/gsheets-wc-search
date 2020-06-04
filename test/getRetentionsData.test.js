@@ -11,17 +11,17 @@ describe('parse retentions tests', () => {
 	it('Creates a proper retention data object', () => {
 		let retentionData = lib.getRetentionsData(bib_retentions_response);
 		expect(retentionData).to.be.an("object");
-		expect(retentionData.numberOfRecords).to.equal(1);
-		expect(retentionData.oclcSymbolsRetentions).to.be.an("array");
-		expect(retentionData.oclcSymbolsRetentions.join()).to.equal("VKM");
+		expect(retentionData.numberOfRetentions).to.equal(1);
+		expect(retentionData.oclcSymbolRetentions).to.be.an("array");		
+		expect(retentionData.oclcSymbolRetentions.join()).to.equal("VKM");
 
 	});
 	
 	it('parse handles no retentions', () => {
 		let retentionData = lib.getRetentionsData(bib_retentions_response_noHoldings);
 		expect(retentionData).to.be.an("object");
-		expect(retentionData.numberOfRecords).to.equal("1");
-		expect(retentionData.oclcSymbolsRetentions).to.be.an("array");
-		expect(retentionData.oclcSymbolsRetentions.join()).to.equal("");
+		expect(retentionData.numberOfRetentions).to.equal(0);
+		expect(retentionData.oclcSymbolRetentions).to.be.an("array");
+		expect(retentionData.oclcSymbolRetentions.join()).to.equal("");
 	});
 });
