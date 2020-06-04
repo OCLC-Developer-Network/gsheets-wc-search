@@ -1,10 +1,9 @@
-const worldcatSearchBaseURL = 'https://americas.discovery.api.oclc.org/worldcat/search/v2'
-	
 function createRequestURL(functionName, oclcNumber, filterType, filterValue) {
+	let worldcatSearchBaseURL = 'https://americas.discovery.api.oclc.org/worldcat/search/v2'
 	let url = worldcatSearchBaseURL;
 	if (functionName == 'getHoldingStatus'){
 		url += '/bibs?q=no:' + oclcNumber + '&' + filterType + '=' + filterValue; 
-	} else if (functionName == 'getHoldingsCount'){
+	} else if (functionName == 'getHoldingsCount' || functionName == 'getHoldings'){
 		url += '/bibs-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;
 	} else if (functionName == 'checkRetentions' || functionName == 'getRetentions'){
 		url += '/bibs-retained-holdings?oclcNumber=' + oclcNumber + '&' + filterType + '=' + filterValue;		
@@ -20,31 +19,33 @@ function getBasicMetadata(result) {
 	
 	let oclcNumber = record.identifier.oclcNumber
 	let title = record.title.mainTitles[0].text
-	title = title.replace(/\s\/+$/, "")
+	title = title.replace(/[^\/]+$/, "")
+	title = title.replace(/\s\/$/, "")
 
 	let author = record.contributor.creators[0].secondName.text + ', ' + record.contributor.creators[0].firstName.text
-
-	let isbns = record.identifier.isbns
+	author = author.replace(/.$/, "");	
 	
-	let isbnList = ""
-	if (isbns && isbns.length > 0) {
-		isbnList = isbns.join('|')
+	let isbns = ""
+	if (record.identifier.isbns == undefined) {
+		isbns = [];
+	} else {
+		isbns = record.identifier.isbns
 	}
 	
-	let mergedOclcNumbers = record.identifier.mergedOclcNumbers
+	let mergedOclcNumbers = "";
 	
-	let mergedOCNList = ""
-	if (mergedOclcNumbers && mergedOclcNumbers.length > 0) {
-		mergedOCNList = mergedOclcNumbers.join('|')
-	}	
-
+	if (record.identifier.mergedOclcNumbers == undefined) {
+		mergedOclcNumbers = [];
+	} else {
+		mergedOclcNumbers = record.identifier.mergedOclcNumbers;
+	}
 	
 	let bib = new Object(); 
 	bib.oclcNumber = oclcNumber
 	bib.title =  title
 	bib.author = author
-	bib.isbns =  isbnList
-	bib.mergedOCNs = mergedOCNList		    		
+	bib.isbns =  isbns
+	bib.mergedOCNs = mergedOclcNumbers		    		
 
     return bib
 }
@@ -63,16 +64,17 @@ function getHoldingStatus(result){
 function getHoldingsData(result) {
 	let bibHoldings = JSON.parse(result);
 	
-    if (result.numberOfRecords == 0 || bibHoldings.briefRecords[0].institutionHolding.briefHoldings == null){
-    	oclcSymbolsHoldings = []
+    if (bibHoldings.numberOfRecords == 0 || bibHoldings.briefRecords[0].institutionHolding.briefHoldings == undefined){
+    	oclcSymbolHoldings = []
     } else {  
 		let holdingSet = bibHoldings.briefRecords[0].institutionHolding.briefHoldings
-		let oclcSymbolsHoldings = holdingSet.map(holding => holding.oclcSymbol)		
+		console.log(holdingSet)
+		let oclcSymbolHoldings = holdingSet.map(holding => holding.oclcSymbol)		
     }
 	
 	let holdingData = new Object(); 
-	holdingData.totalHoldingCount = result.briefRecords[0].institutionHolding.totalHoldingCount
-	holdingData.libraries = oclcSymbolsHoldings		    		
+	holdingData.totalHoldingCount = bibHoldings.briefRecords[0].institutionHolding.totalHoldingCount
+	holdingData.libraries = oclcSymbolHoldings		    		
 
     return holdingData
 }
@@ -80,18 +82,21 @@ function getHoldingsData(result) {
 function getRetentionsData(result) {
 	let bibRetainedHoldings = JSON.parse(result);
 	
-    if (bibRetainedHoldings.numberOfRecords == 0){
+	let numberOfRetentions = 0
+	let oclcSymbolsRetentions = []
+	
+    if (bibRetainedHoldings.numberOfRecords == 0 || bibRetainedHoldings.briefRecords[0].institutionHolding.briefHoldings == undefined){
+    	numberOfRetentions = 0
     	oclcSymbolsRetentions = []
     } else {  
 		let retentionSet = bibRetainedHoldings.briefRecords[0].institutionHolding.briefHoldings
-		let oclcSymbolsRetentions = retentionSet.map(retention => retention.oclcSymbol)		
+		oclcSymbolRetentions = retentionSet.map(retention => retention.oclcSymbol)
+		numberOfRetentions = retentionSet.length
     }
 	
 	let retentionData = new Object();
-	retentionData.numberOfRecords = bibRetainedHoldings.numberOfRecords
-	retentionData.oclcSymbolsRetentions = oclcSymbolsRetentions		    		
+	retentionData.numberOfRetentions = numberOfRetentions
+	retentionData.oclcSymbolsRetentions = oclcSymbolRetentions		    		
 
     return retentionData
 }
-
-export {getBasicMetadata, getHoldingStatus, getHoldingsData, getRetentionsData, createRequestURL}

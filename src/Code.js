@@ -205,9 +205,8 @@ function fillMetadata(){
 
 	      // The API might not have a title, so only fill it in
 	      // if the API returns one
-	      if(bookData.isbns){
-	    	  console.log(bookData.isbns)
-	        bookValues[row][ISBN_COLUMN] = bookData.isbns; 
+	      if(bookData.isbns && bookData.isbns.length > 0){
+	        bookValues[row][ISBN_COLUMN] = bookData.isbns.join('|');
 	      }
 	      
 	      // The API might not have a title, so only fill it in
@@ -223,9 +222,9 @@ function fillMetadata(){
 	          bookData.author; 
 	      }
 	      
-	      if(bookData.mergedOCNs){
+	      if(bookData.mergedOCNs && bookData.mergedOCNs.length > 0){
 		        bookValues[row][MERGEDOCNS_COLUMN] =
-		          bookData.mergedOCNs; 
+		          bookData.mergedOCNs.join('|'); 
 		      }
 	  }
 	  
