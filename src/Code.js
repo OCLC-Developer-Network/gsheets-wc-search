@@ -416,7 +416,7 @@ function getRetentions(oclcNumber, filterType, filterValue){
 	      validateHttpsCertificates: false
 	    });
 	    let bibRetainedHoldings = getRetentionsData(response.getContentText());
-	    return bibRetainedHoldings.oclcSymbolsRetentions.join()
+	    return bibRetainedHoldings.oclcSymbolRetentions.join()
 	  } else {
 	    Logger.log(service.getLastError());
 	  }
