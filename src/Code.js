@@ -319,14 +319,14 @@ function fillRetentionInfo(form){
 function getMetadata(oclcNumber){
 	  var service = getService();
 	  if (service.hasAccess()) {
-	    var url = appLibrary.createRequestURL('getMetadata', oclcNumber)
+	    var url = createRequestURL('getMetadata', oclcNumber)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bib = appLibrary.getBasicMetadata(response.getContentText());	    
+	    let bib = getBasicMetadata(response.getContentText());	    
 		return bib	    	    
 	  } else {
 	    Logger.log(service.getLastError());
@@ -336,14 +336,14 @@ function getMetadata(oclcNumber){
 function getHoldingStatus(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = appLibrary.createRequestURL('getHoldingStatus', oclcNumber, filterType, filterValue)
+		var url = createRequestURL('getHoldingStatus', oclcNumber, filterType, filterValue)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });	 
-	    let holdingStatus = appLibrary.getHoldingStatus(response.getContentText())
+	    let holdingStatus = getHoldingStatus(response.getContentText())
 		return holdingStatus
 	  } else {
 	    Logger.log(service.getLastError());
@@ -353,14 +353,14 @@ function getHoldingStatus(oclcNumber, filterType, filterValue){
 function getHoldingsCount(oclcNumber, country){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = appLibrary.createRequestURL('getHoldingsCount', oclcNumber, 'heldInCountry', country)
+		var url = createRequestURL('getHoldingsCount', oclcNumber, 'heldInCountry', country)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let holdingsData = appLibrary.getHoldingsData(response.getContentText());	    
+	    let holdingsData = getHoldingsData(response.getContentText());	    
 		return holdingsData.totalHoldingCount
 	  } else {
 	    Logger.log(service.getLastError());
@@ -370,14 +370,14 @@ function getHoldingsCount(oclcNumber, country){
 function getHoldings(oclcNumber, country){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = appLibrary.createRequestURL('getHoldings', oclcNumber, 'heldInCountry', country)
+		var url = createRequestURL('getHoldings', oclcNumber, 'heldInCountry', country)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let holdingsData = appLibrary.getHoldingsData(response.getContentText());	    
+	    let holdingsData = getHoldingsData(response.getContentText());	    
 		return holdingsData.libraries.join()
 	  } else {
 	    Logger.log(service.getLastError());
@@ -387,15 +387,15 @@ function getHoldings(oclcNumber, country){
 function checkRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = appLibrary.createRequestURL('checkRetentions', oclcNumber, filterType, filterValue)
+		var url = createRequestURL('checkRetentions', oclcNumber, filterType, filterValue)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-		let bibRetainedHoldings = appLibrary.getRetentionsData(response.getContentText());
-		if (bibRetainedHoldings.numberOfRecords == 0){
+		let bibRetainedHoldings = getRetentionsData(response.getContentText());
+		if (bibRetainedHoldings.numberOfRetentions == 0){
 			return "FALSE"
 		} else {
 			return "TRUE"
@@ -408,14 +408,14 @@ function checkRetentions(oclcNumber, filterType, filterValue){
 function getRetentions(oclcNumber, filterType, filterValue){
 	  var service = getService();
 	  if (service.hasAccess()) {
-		var url = appLibrary.createRequestURL('getRetentions', oclcNumber, filterType, filterValue)
+		var url = createRequestURL('getRetentions', oclcNumber, filterType, filterValue)
 	    var response = UrlFetchApp.fetch(url, {
 	      headers: {
 	        Authorization: 'Bearer ' + service.getAccessToken()        
 	      },
 	      validateHttpsCertificates: false
 	    });
-	    let bibRetainedHoldings = appLibrary.getRetentionsData(response.getContentText());
+	    let bibRetainedHoldings = getRetentionsData(response.getContentText());
 	    return bibRetainedHoldings.oclcSymbolsRetentions.join()
 	  } else {
 	    Logger.log(service.getLastError());
