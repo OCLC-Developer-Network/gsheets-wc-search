@@ -1,0 +1,281 @@
+{
+    "identifier": {
+        "oclcNumber": "27972555",
+        "lccn": "92062277",
+        "isbns": [
+            "0300055536",
+            "9780300055535",
+            "9780300230918",
+            "0300230915"
+        ],
+        "externalIdentifiers": [
+            {
+                "oclcSymbol": "AU@",
+                "systemControlNumber": "000009819470"
+            },
+            {
+                "oclcSymbol": "AU@",
+                "systemControlNumber": "000043406506"
+            },
+            {
+                "oclcSymbol": "AU@",
+                "systemControlNumber": "000048885520"
+            },
+            {
+                "oclcSymbol": "AU@",
+                "systemControlNumber": "000053697243"
+            },
+            {
+                "oclcSymbol": "NZ1",
+                "systemControlNumber": "3356062"
+            },
+            {
+                "oclcSymbol": "UNITY",
+                "systemControlNumber": "000353825"
+            },
+            {
+                "oclcSymbol": "YDXCP",
+                "systemControlNumber": "165222"
+            },
+            {
+                "oclcSymbol": "ZWZ",
+                "systemControlNumber": "016902009"
+            },
+            {
+                "oclcSymbol": "AU@",
+                "systemControlNumber": "000060996068"
+            },
+            {
+                "oclcSymbol": "UKMGB",
+                "systemControlNumber": "009799179"
+            }
+        ],
+        "mergedOclcNumbers": [
+            "1008281567"
+        ]
+    },
+    "title": {
+        "mainTitles": [
+            {
+                "text": "Design, form, and chaos / Paul Rand."
+            }
+        ]
+    },
+    "contributor": {
+        "creators": [
+            {
+                "firstName": {
+                    "text": "Paul"
+                },
+                "secondName": {
+                    "text": "Rand"
+                },
+                "type": "person",
+                "creatorNotes": [
+                    "1914-1996."
+                ]
+            }
+        ]
+    },
+    "subjects": [
+        {
+            "subjectName": {
+                "text": "Rand, Paul, 1914-1996 Criticism and interpretation."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "personalName"
+        },
+        {
+            "subjectName": {
+                "text": "Rand, Paul, 1914-1996 Critique et interprétation."
+            },
+            "vocabulary": "Répertoire de vedettes-matière",
+            "subjectType": "personalName"
+        },
+        {
+            "subjectName": {
+                "text": "Rand, Paul, 1914-1996"
+            },
+            "vocabulary": "fast",
+            "subjectType": "personalName"
+        },
+        {
+            "subjectName": {
+                "text": "Commercial art."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Design."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Commercial art United States."
+            },
+            "vocabulary": "Source not specified",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Design United States."
+            },
+            "vocabulary": "Source not specified",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Designers United States."
+            },
+            "vocabulary": "Source not specified",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Art publicitaire États-Unis."
+            },
+            "vocabulary": "Répertoire de vedettes-matière",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Design États-Unis."
+            },
+            "vocabulary": "Répertoire de vedettes-matière",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Logotypes."
+            },
+            "vocabulary": "Répertoire de vedettes-matière",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Marques de commerce États-Unis."
+            },
+            "vocabulary": "Répertoire de vedettes-matière",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Commercial art."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Design."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Grafische vormgeving."
+            },
+            "vocabulary": "gtt",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Sociale aspecten."
+            },
+            "vocabulary": "gtt",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Design États-Unis."
+            },
+            "vocabulary": "ram",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Designers États-Unis."
+            },
+            "vocabulary": "ram",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Criticism, interpretation, etc."
+            },
+            "vocabulary": "fast",
+            "subjectType": "genreFormTerm"
+        },
+        {
+            "subjectName": {
+                "text": "Design"
+            },
+            "subjectType": "uncontrolledTerm"
+        }
+    ],
+    "classification": {
+        "dewey": "741.6092 741.6",
+        "lc": "NC997 .R27 1993"
+    },
+    "publishers": [
+        {
+            "publisherName": {
+                "text": "Yale University Press"
+            },
+            "publicationPlace": "New Haven :"
+        }
+    ],
+    "date": {
+        "publicationDate": "1993",
+        "createDate": "19921028",
+        "replaceDate": "20190801"
+    },
+    "language": {
+        "catalogingLanguage": "eng"
+    },
+    "edition": {},
+    "note": {},
+    "format": {
+        "generalFormat": "Book",
+        "specificFormat": "PrintBook"
+    },
+    "musicInfo": {},
+    "description": {
+        "physicalDescription": "xii, 218 pages : chiefly illustrations (some color) ; 27 cm",
+        "genres": [
+            "Criticism, interpretation, etc."
+        ],
+        "summaries": [
+            {
+                "text": "Paul Rand's stature as one of the world's leading graphic designers is incontestable. For half a century his pioneering work in the field of advertising design and typography has exerted a profound influence on the design profession; he almost single-handedly transformed \"commercial art\" from a practice that catered to the lowest common denominator of taste to one that could assert its place among the other fine arts. Among the numerous clients for whom he has been a consultant and/or designer are the American Broadcasting Company, IBM Corporation, and Westinghouse Electric Corporation. In this witty and instructive book, Paul Rand speaks about the contemporary practice of graphic design, explaining the process and passion that foster good design and indicting faddism and trendiness. Illustrating his ideas with examples of his own stunning graphic work as well as with the work of artists he admires, Rand discusses such topics as: the values on which aesthetic judgments are based; the part played by intuition in good design; the proper relationship between management and designers; the place of market research; how and when to use computers in the production of a design; choosing a typeface; principles of book design; and the thought processes that lead to a final design. The centerpiece of the book consists of seven design portfolios - with diagrams and ultimate choices - that Rand used to present his logos to clients such as Next, IDEO, and IBM."
+            }
+        ],
+        "contents": [
+            {
+                "contentNote": {
+                    "text": "Form + Content -- Good Design Is Goodwill -- Intuition and Ideas -- Logos ... Flags ... Street Signs -- The Presentation -- Next -- The Limited -- The IBM Logo -- AdStar Advanced Storage and Retrieval -- IDEO Design -- Morningstar Investment Advisers -- Computers, Pencils, and Brushes -- Aspects of Book Design -- A Mentor -- From Cassandre to Chaos."
+                }
+            }
+        ],
+        "bibliographies": [
+            {
+                "text": "Includes bibliographical references."
+            }
+        ],
+        "peerReviewed": "N"
+    },
+    "related": {},
+    "work": {
+        "id": "329853",
+        "count": 23
+    },
+    "database": {
+        "source": "xwc",
+        "collection": "xwc"
+    }
+}

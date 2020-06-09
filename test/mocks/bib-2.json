@@ -1,0 +1,115 @@
+{
+    "identifier": {
+        "oclcNumber": "1928",
+        "lccn": "68029341",
+        "externalIdentifiers": [
+            {
+                "oclcSymbol": "NLC",
+                "systemControlNumber": "000001890708"
+            }
+        ],
+        "mergedOclcNumbers": [
+            "8450570"
+        ]
+    },
+    "title": {
+        "mainTitles": [
+            {
+                "text": "Crossings."
+            }
+        ]
+    },
+    "contributor": {
+        "creators": [
+            {
+                "firstName": {
+                    "text": "Hua."
+                },
+                "secondName": {
+                    "text": "Chuang"
+                },
+                "type": "person"
+            }
+        ]
+    },
+    "subjects": [
+        {
+            "subjectName": {
+                "text": "Civil society."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "International relations."
+            },
+            "vocabulary": "Library of Congress Subject Headings",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "Civil society."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        },
+        {
+            "subjectName": {
+                "text": "International relations."
+            },
+            "vocabulary": "fast",
+            "subjectType": "topic"
+        }
+    ],
+    "classification": {
+        "dewey": "813/.5/4",
+        "lc": "PZ4.C5584 PS3553.H78"
+    },
+    "publishers": [
+        {
+            "publisherName": {
+                "text": "Dial Press"
+            },
+            "publicationPlace": "New York,"
+        }
+    ],
+    "date": {
+        "publicationDate": "1968.",
+        "createDate": "19690414",
+        "replaceDate": "20180802"
+    },
+    "language": {
+        "catalogingLanguage": "eng"
+    },
+    "edition": {},
+    "note": {
+        "generalNotes": [
+            {
+                "text": "A novel.",
+                "local": "N"
+            }
+        ]
+    },
+    "format": {
+        "generalFormat": "Book",
+        "specificFormat": "PrintBook",
+        "materialTypes": [
+            "fic"
+        ]
+    },
+    "musicInfo": {},
+    "description": {
+        "physicalDescription": "214 pages 20 cm",
+        "peerReviewed": "N"
+    },
+    "related": {},
+    "work": {
+        "id": "1125246",
+        "count": 20
+    },
+    "database": {
+        "source": "xwc",
+        "collection": "xwc"
+    }
+}
