@@ -19,11 +19,15 @@ function getBasicMetadata(result) {
 	
 	let oclcNumber = record.identifier.oclcNumber
 	let title = record.title.mainTitles[0].text
-	title = title.replace(/[^\/]+$/, "")
-	title = title.replace(/\s\/$/, "")
-
+	// remove trailing space slash
+	title = title.replace(/\s\/.*$/, "")
+	// remove trailing period
+	title = title.replace(/\.$/, "");
+	
 	let author = record.contributor.creators[0].secondName.text + ', ' + record.contributor.creators[0].firstName.text
-	author = author.replace(/.$/, "");	
+	// remove trailing commas
+	// remove trailing periods
+	author = author.replace(/\.$/, "");	
 	
 	let isbns = ""
 	if (record.identifier.isbns == undefined) {
