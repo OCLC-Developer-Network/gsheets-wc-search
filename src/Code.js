@@ -378,7 +378,7 @@ function getHoldings(oclcNumber, country){
 	      validateHttpsCertificates: false
 	    });
 	    let holdingsData = getHoldingsData(response.getContentText());	    
-		return holdingsData.libraries.join()
+		return holdingsData.libraries.join('|')
 	  } else {
 	    Logger.log(service.getLastError());
 	  }
@@ -416,7 +416,7 @@ function getRetentions(oclcNumber, filterType, filterValue){
 	      validateHttpsCertificates: false
 	    });
 	    let bibRetainedHoldings = getRetentionsData(response.getContentText());
-	    return bibRetainedHoldings.oclcSymbolRetentions.join()
+	    return bibRetainedHoldings.oclcSymbolRetentions.join('|')
 	  } else {
 	    Logger.log(service.getLastError());
 	  }
