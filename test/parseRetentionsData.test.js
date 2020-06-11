@@ -9,7 +9,7 @@ bib_retentions_response_noHoldings = fs.readFileSync(require('path').resolve(__d
 
 describe('parse retentions tests', () => {
 	it('Creates a proper retention data object', () => {
-		let retentionData = lib.getRetentionsData(bib_retentions_response);
+		let retentionData = lib.parseRetentionsData(bib_retentions_response);
 		expect(retentionData).to.be.an("object");
 		expect(retentionData.numberOfRetentions).to.equal(1);
 		expect(retentionData.oclcSymbolRetentions).to.be.an("array");		
@@ -18,7 +18,7 @@ describe('parse retentions tests', () => {
 	});
 	
 	it('parse handles no retentions', () => {
-		let retentionData = lib.getRetentionsData(bib_retentions_response_noHoldings);
+		let retentionData = lib.parseRetentionsData(bib_retentions_response_noHoldings);
 		expect(retentionData).to.be.an("object");
 		expect(retentionData.numberOfRetentions).to.equal(0);
 		expect(retentionData.oclcSymbolRetentions).to.be.an("array");

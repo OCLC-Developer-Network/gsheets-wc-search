@@ -9,7 +9,7 @@ bib_holding_response_noHoldings = fs.readFileSync(require('path').resolve(__dirn
 
 describe('parse basic holdings tests', () => {
 	it('Creates a proper holding data object', () => {
-		let holdingData = lib.getHoldingsData(bib_holding_response);
+		let holdingData = lib.parseHoldingsData(bib_holding_response);
 		expect(holdingData).to.be.an("object");
 		expect(holdingData.totalHoldingCount).to.equal(463);
 		expect(holdingData.libraries).to.be.an("array");
@@ -18,7 +18,7 @@ describe('parse basic holdings tests', () => {
 	});
 	
 	it('parse handles no holdings', () => {
-		let holdingData = lib.getHoldingsData(bib_holding_response_noHoldings);
+		let holdingData = lib.parseHoldingsData(bib_holding_response_noHoldings);
 		expect(holdingData).to.be.an("object");
 		expect(holdingData.totalHoldingCount).to.equal(246);
 		expect(holdingData.libraries).to.be.an("array");

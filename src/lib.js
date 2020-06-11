@@ -54,7 +54,7 @@ function getBasicMetadata(result) {
     return bib
 }
 
-function getHoldingStatus(result){
+function parseHoldingStatus(result){
 	let bib_results = JSON.parse(result);
 	let holdingStatus = ""
     if (bib_results.numberOfRecords > 0) {
@@ -65,7 +65,7 @@ function getHoldingStatus(result){
 	return holdingStatus
 }
 
-function getHoldingsData(result) {
+function parseHoldingsData(result) {
 	let bibHoldings = JSON.parse(result);
 	
 	let oclcSymbolHoldings = [];
@@ -83,7 +83,7 @@ function getHoldingsData(result) {
     return holdingData
 }
 
-function getRetentionsData(result) {
+function parseRetentionsData(result) {
 	let bibRetainedHoldings = JSON.parse(result);
 	
 	let numberOfRetentions = 0

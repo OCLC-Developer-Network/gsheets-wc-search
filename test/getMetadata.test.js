@@ -12,7 +12,7 @@ bib_response = fs.readFileSync(require('path').resolve(__dirname, './mocks/bib.j
 bib_noISBNs_response = fs.readFileSync(require('path').resolve(__dirname, './mocks/bib-noISBNs.json')).toString();
 no_bib_response = fs.readFileSync(require('path').resolve(__dirname, './mocks/no_bib.json')).toString();
 
-describe('when stubbed', () => {
+describe('when getMetadata request is stubbed', () => {
     before(() => {
 	    sinon.stub(lib, 'getService').returns({
     		hasAccess: () => true,
@@ -21,6 +21,9 @@ describe('when stubbed', () => {
       });
 	afterEach(() => {
     	mocks.UrlFetchApp.fetch.restore();
+      });
+	after(() => {
+    	lib.getService.restore();
       });
 	describe('Make a request for a record', () => {
 		it('Creates a proper object', () => {
