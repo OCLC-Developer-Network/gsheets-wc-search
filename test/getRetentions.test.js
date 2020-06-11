@@ -4,8 +4,6 @@ const gas = require('gas-local');
 const sinon = require('sinon');
 const mocks = require("./mocks/gas-mocks");
 
-// need to mock OAuth service piece
-
 const lib = gas.require('./src', mocks);
 
 bib_retentions_response = fs.readFileSync(require('path').resolve(__dirname, './mocks/bib_retained_holdings.json')).toString();
