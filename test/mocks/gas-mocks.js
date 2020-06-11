@@ -115,6 +115,7 @@ var Spreadsheets;
     Spreadsheets.App = App;
 })(Spreadsheets || (Spreadsheets = {}));
 let SpreadsheetApp = Spreadsheets.App;
+
 var URLFetch;
 (function (URLFetch) {
     class App {
@@ -170,5 +171,47 @@ var XML;
 })(XML || (XML = {}));
 let XmlService = XML.Service;
 
+var Property;
+(function (Property) {    
+	class Service {
+        static getDocumentProperties() {
+            return new Properties();
+        }
+        static getScriptProperties() {
+        	return new Properties();
+        }
+        static getUserProperties() {
+        	return new Properties();
+        }
+    }
+	Property.Service = Service;
+})(Property || (Property = {}));
+let PropertiesService = Property.Service
 
-module.exports = {XmlService, UrlFetchApp, SpreadsheetApp}
+class Properties {
+	constructor() {
+		  this.store = {};
+		  this.counter = 0;
+		};
+
+	getProperty(key) {
+	  ++this.counter;
+	  return this.store[key];
+	};
+
+	setProperty(key, value) {
+	  this.store[key] = value;
+	};
+
+	deleteProperty(key) {
+	  delete this.store[key];
+	};
+
+	getProperties() {
+	  return Object.assign({}, this.store);
+	};
+}
+
+
+module.exports = {XmlService, UrlFetchApp, SpreadsheetApp, PropertiesService}
+module.exports.Properties = Properties
