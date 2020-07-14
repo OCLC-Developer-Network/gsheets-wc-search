@@ -75,16 +75,18 @@ function showGetRetentionsDialog() {
 	      .showModalDialog(html, 'Enter Filter Criteria');
 	}
 
+function showAlert(message) {
+	var ui = SpreadsheetApp.getUi();
+	ui.alert(message);
+}
+
 function saveCredentials(form) {
-   
-   var ui = SpreadsheetApp.getUi();
-   
    //MAKE SURE THE OCLC API KEY AND SECRET HAVE BEEN ENTERED
    let apiKey = form.apiKey;
    let secret = form.apiSecret;
    let institutionSymbol = form.institutionSymbol;
    if (apiKey == null || apiKey == "" || secret == null || secret == "" || institutionSymbol == null || institutionSymbol == "") {
-     ui.alert("OCLC API Key, Secret and Institution Symbol are Required");
+	 showAlert("OCLC API Key, Secret and Institution Symbol are Required");
      return;
    }
    PropertiesService.getUserProperties().setProperty('apiKey', apiKey);
