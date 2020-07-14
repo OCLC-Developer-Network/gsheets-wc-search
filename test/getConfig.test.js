@@ -8,6 +8,9 @@ const mocks = require("./mocks/gas-mocks");
 const lib = gas.require('./src', mocks);
 
 describe('when PropertiesService stubbed', () => {
+	after(() => {
+    	lib.PropertiesService.getUserProperties.restore();
+      });
 	describe('Get configuration data', () => {
 		it('returns a valid configuration object', () => {
 			let mockProperties = new mocks.Properties()
