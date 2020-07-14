@@ -239,8 +239,11 @@ function fillMergedOCNs(){
 	    .getDataRange();
 	  var bookValues = dataRange.getValues();
 	  for(var row = 1; row < bookValues.length; row++){
-		  let bib = getMetadata(bookValues[row][0])		 
-		  bookValues[row][6] = bib.mergedOCNs;
+		  let bib = getMetadata(bookValues[row][0])
+		  if(bib.mergedOCNs && bib.mergedOCNs.length > 0){
+			  bookValues[row][6] =
+				  bib.mergedOCNs.join('|'); 
+		  }
 	  }
 	  
 	  dataRange.setValues(bookValues); 
