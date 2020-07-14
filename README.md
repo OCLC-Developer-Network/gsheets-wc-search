@@ -8,7 +8,19 @@
 - Get Holdings Count
 - Get Holdings           
 - Check Retentions
-- Get Retentions  
+- Get Retentions 
+
+## Prerequisites
+
+Google Account
+
+### Install NPM
+https://www.npmjs.com/get-npm
+
+### Install clasp
+
+```bash
+npm install @google/clasp -g 
 
 ## Installation instructions
 ### Step 1: Clone the repository
